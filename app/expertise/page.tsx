@@ -29,7 +29,7 @@ export default function ExpertisePage() {
 
       {/* Header de page */}
       <section
-        className="relative flex min-h-[60vh] w-full items-center justify-center overflow-hidden py-32 text-center"
+        className="relative flex min-h-[50vh] w-full items-center justify-center overflow-hidden py-32 text-center"
         style={{
           backgroundImage: "url('/images/Lionbatiment.png')",
           backgroundSize: 'cover',

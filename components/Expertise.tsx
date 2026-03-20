@@ -115,7 +115,7 @@ export function Expertise() {
               className="flex flex-col gap-4 rounded-xl border border-white/6 bg-[#0d1118] p-8 transition-all duration-200 hover:-translate-y-1 hover:border-[#1a5fb0]/40 hover:shadow-[0_0_24px_rgba(26,95,176,0.12)]"
             >
               {item.image ? (
-                <div className="relative h-44 w-full">
+                <div className="relative h-48 w-full">
                   <Image
                     src={item.image}
                     alt={item.title}

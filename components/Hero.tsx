@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-[#0b0f1a] px-6 pt-16 pb-12 text-center lg:px-12"
+      className="relative flex min-h-[50vh] w-full flex-col items-center justify-center overflow-hidden bg-[#0b0f1a] px-6 pt-16 pb-12 text-center lg:px-12"
     >
       {/* Vidéo de fond */}
       <video
@@ -23,6 +23,7 @@ export function Hero() {
         loop
         playsInline
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        style={{ objectPosition: 'right bottom' }}
       >
         <source src="/videos/background1.mp4" type="video/mp4" />
       </video>
@@ -101,7 +102,7 @@ export function Hero() {
           style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
         >
           Votre électricien industriel &amp; tertiaire{' '}
-          <span className="bg-gradient-to-r from-[#7ab0e8] to-[#5a90d0] bg-clip-text text-transparent">en Belgique.</span>
+          <span className="bg-linear-to-r from-[#7ab0e8] to-[#5a90d0] bg-clip-text text-transparent">en Belgique.</span>
         </motion.h1>
 
         {/* Sous-titre */}
