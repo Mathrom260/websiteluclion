@@ -13,8 +13,23 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-0 flex-col items-center justify-center overflow-hidden bg-[#090c10] px-6 pt-16 pb-12 text-center"
+      className="relative flex min-h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-[#090c10] px-6 pt-16 pb-12 text-center lg:px-12"
     >
+      {/* Vidéo de fond */}
+      <video
+        aria-hidden
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/videos/background1.mp4" type="video/mp4" />
+      </video>
+
+      {/* Overlay sombre */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-[rgba(9,12,16,0.70)]" />
+
       {/* Background parallax */}
       <motion.div
         aria-hidden
@@ -63,13 +78,13 @@ export function Hero() {
       </motion.div>
 
       {/* Contenu — fixe, pas de parallax */}
-      <div className="relative z-10 mx-auto w-full max-w-4xl space-y-8 text-center">
+      <div className="relative z-10 w-full space-y-8 text-center">
         {/* Badge pill */}
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#5a90d0]/30 bg-[#0d1a2e] px-4 py-1.5"
+          className="inline-flex items-center gap-2 rounded-full border border-[#5a90d0]/40 bg-[#0d1a2e] px-4 py-1.5"
         >
           <ShieldCheck className="h-3.5 w-3.5 animate-pulse text-[#5a90d0] opacity-70" />
           <span className="text-xs font-medium tracking-wide text-[#5a90d0]">
@@ -82,15 +97,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.15 }}
-          className="text-4xl font-black leading-[1.1] tracking-tight text-[#eef2f8] md:text-5xl"
+          className="mx-auto max-w-5xl text-5xl font-black leading-tight text-center text-[#eef2f8] md:text-6xl"
+          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
         >
-          <span className="block">Installations électriques fiables</span>
-          <span className="block">
-            pour bâtiments industriels et{' '}
-            <span className="bg-linear-to-r from-[#5a90d0] to-[#1a5fb0] bg-clip-text text-transparent">
-              tertiaires
-            </span>
-          </span>
+          Votre électricien industriel &amp; tertiaire{' '}
+          <span className="bg-gradient-to-r from-[#7ab0e8] to-[#5a90d0] bg-clip-text text-transparent">en Belgique.</span>
         </motion.h1>
 
         {/* Sous-titre */}
@@ -98,7 +109,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.25 }}
-          className="mx-auto max-w-2xl text-base leading-relaxed text-[#7a8a9a] md:text-lg"
+          className="mx-auto max-w-2xl text-base leading-relaxed text-[#c8d4e8] md:text-lg"
         >
           Nous accompagnons entreprises, promoteurs et gestionnaires de sites dans leurs projets électriques : installations, rénovations et mises en conformité, avec une exigence forte sur la sécurité, les délais et la fiabilité.
         </motion.p>
@@ -112,13 +123,13 @@ export function Hero() {
         >
           <Link
             href="/contact"
-            className="shimmer-btn relative overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
+            className="shimmer-btn relative min-w-50 overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
           >
-            Demander un devis
+            Nous contacter
           </Link>
           <Link
             href="/expertise"
-            className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-transparent px-8 py-3 text-sm text-[#c8d8f0] transition-all duration-200 hover:scale-[1.02] hover:bg-white/10 hover:shadow-[0_0_12px_rgba(90,144,208,0.15)]"
+            className="min-w-50 rounded-xl border border-white/40 bg-transparent px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-white/10 hover:shadow-[0_0_12px_rgba(90,144,208,0.15)]"
           >
             Découvrir nos services
           </Link>
@@ -129,7 +140,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.45 }}
-          className="mt-3 text-center text-xs text-[#7a8a9a]"
+          className="mt-3 text-center text-xs text-[#a0b0c8]"
         >
           Réponse rapide — analyse professionnelle de votre besoin
         </motion.p>

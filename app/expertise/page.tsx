@@ -28,8 +28,19 @@ export default function ExpertisePage() {
       <NavBar />
 
       {/* Header de page */}
-      <section className="bg-[#090c10] px-6 pt-24 pb-12 text-center md:px-8">
-        <div className="mx-auto w-full max-w-3xl">
+      <section
+        className="relative flex min-h-[60vh] w-full items-center justify-center overflow-hidden py-32 text-center"
+        style={{
+          backgroundImage: "url('/images/Lionbatiment.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: '50% 30%',
+        }}
+      >
+        {/* Overlay */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[rgba(9,12,16,0.82)]" />
+
+        {/* Contenu */}
+        <div className="relative z-10 mx-auto max-w-3xl px-6">
           <h1 className="text-4xl font-black leading-tight text-center text-[#eef2f8] md:text-5xl">
             <span className="block">Notre expertise au service de</span>
             <span className="block">
@@ -39,7 +50,7 @@ export default function ExpertisePage() {
               </span>
             </span>
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#7a8a9a] md:text-lg">
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#c8d4e8] md:text-lg">
             Installations, mises en conformité et maintenance — réalisées par
             des techniciens certifiés VCA* et agréés RGIE.
           </p>
