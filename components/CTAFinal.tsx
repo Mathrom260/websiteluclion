@@ -28,9 +28,6 @@ export function CTAFinal() {
             >
               Échanger sur votre besoin
             </Link>
-            <p className="mt-3 text-xs text-[#7a8a9a]">
-              Réponse rapide · Analyse structurée · Interventions en Belgique
-            </p>
           </div>
         </motion.div>
       </div>

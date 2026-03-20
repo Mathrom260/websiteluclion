@@ -21,46 +21,46 @@ type ExpertiseCard = {
 
 const expertiseItems: ExpertiseCard[] = [
   {
-    id: 'electricite-industrielle',
+    id: 'installations-electriques',
     icon: Zap,
-    title: 'Électricité industrielle',
+    title: 'Installations électriques',
     description:
-      'Installations sur sites de production, usines et entrepôts. Haute et basse tension.',
+      "Conception et réalisation d'installations haute et basse tension sur sites industriels et tertiaires.",
   },
   {
-    id: 'electricite-tertiaire',
+    id: 'batiments-tertiaires',
     icon: Building2,
-    title: 'Électricité tertiaire',
+    title: 'Bâtiments tertiaires',
     description:
-      'Bureaux, commerces et bâtiments publics. Installations complètes clés en main.',
+      'Bureaux, commerces, hôtels et bâtiments publics. Installations complètes et conformes.',
   },
   {
     id: 'tableaux-electriques',
     icon: LayoutGrid,
     title: 'Tableaux électriques',
     description:
-      'Conception, câblage et mise en service de tableaux basse tension sur mesure.',
+      'Conception et câblage de tableaux basse tension sur mesure, adaptés à vos besoins.',
   },
   {
-    id: 'mise-normes-rgie',
+    id: 'mise-conformite-rgie',
     icon: ShieldCheck,
-    title: 'Mise aux normes RGIE',
+    title: 'Mise en conformité RGIE',
     description:
-      'Audit, remise en conformité et certification selon le RGIE Art.104.',
+      'Audit et remise aux normes de vos installations selon le RGIE Art.104.',
   },
   {
     id: 'infrastructure-cablage',
     icon: Cable,
     title: 'Infrastructure & câblage',
     description:
-      'Cheminements de câbles, goulottes et chemins de câbles industriels.',
+      'Cheminements de câbles, goulottes et chemins de câbles pour tous types de sites.',
   },
   {
     id: 'maintenance-depannage',
     icon: Wrench,
     title: 'Maintenance & dépannage',
     description:
-      'Interventions rapides, contrats de maintenance préventive et curative.',
+      'Contrats de maintenance préventive et interventions curatives rapides.',
   },
 ];
 
@@ -91,11 +91,11 @@ export function Expertise() {
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="space-y-6 text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
-            Ce que nous réalisons
+            Domaines d&apos;intervention
           </h2>
           <p className="mx-auto max-w-3xl text-base text-[#7a8a9a] sm:text-lg">
-            De l&apos;installation neuve à la mise aux normes, nous intervenons
-            sur l&apos;ensemble de vos besoins électriques.
+            Une couverture complète de vos besoins électriques, du neuf à la
+            mise en conformité.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export function Expertise() {
             <motion.article
               key={item.id}
               variants={cardVariants}
-              className="flex flex-col gap-4 rounded-xl border border-white/6 bg-[#0d1118] p-8 transition-colors duration-200 hover:-translate-y-1 hover:border-[#1a5fb0]/40 hover:shadow-[0_20px_40px_rgba(10,20,35,0.45)]"
+              className="flex flex-col gap-4 rounded-xl border border-white/6 bg-[#0d1118] p-8 transition-all duration-200 hover:-translate-y-1 hover:border-[#1a5fb0]/40 hover:shadow-[0_0_24px_rgba(26,95,176,0.12)]"
             >
               {item.image ? (
                 <div className="relative h-44 w-full">
@@ -127,7 +127,7 @@ export function Expertise() {
                 </div>
               ) : null}
 
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#0d1a2e]">
+              <div className="flex shrink-0 items-center justify-center rounded-lg bg-[#0d1a2e] p-2.5">
                 <Icon className="h-5 w-5 text-[#5a90d0]" />
               </div>
               <p className="text-[15px] font-semibold text-[#eef2f8]">

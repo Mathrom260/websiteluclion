@@ -46,7 +46,7 @@ export function Hero() {
         >
           <ShieldCheck className="h-3.5 w-3.5 animate-pulse text-[#5a90d0] opacity-70" />
           <span className="text-xs font-medium tracking-wide text-[#5a90d0]">
-            Électricité industrielle &amp; tertiaire en Belgique
+            Spécialiste des installations électriques professionnelles
           </span>
         </motion.div>
 
@@ -55,13 +55,14 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
-          className="text-4xl leading-[1.1] font-black tracking-tight text-[#eef2f8] sm:text-5xl md:text-6xl"
+          className="text-4xl font-black leading-[1.1] tracking-tight text-[#eef2f8] md:text-5xl"
         >
-          Votre partenaire électrique
-          <br />
-          pour bâtiments industriels &amp;{' '}
-          <span className="bg-gradient-to-r from-[#5a90d0] to-[#1a5fb0] bg-clip-text text-transparent">
-            tertiaires.
+          <span className="block">Installations électriques fiables</span>
+          <span className="block">
+            pour bâtiments industriels et{' '}
+            <span className="bg-linear-to-r from-[#5a90d0] to-[#1a5fb0] bg-clip-text text-transparent">
+              tertiaires
+            </span>
           </span>
         </motion.h1>
 
