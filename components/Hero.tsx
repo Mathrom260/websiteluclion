@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ShieldCheck } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+
 
 export function Hero() {
   return (
@@ -11,15 +11,32 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-0 flex-col items-center justify-center overflow-hidden px-6 pt-16 pb-12 text-center"
     >
-      {/* Ambient glow */}
+      {/* Grid technique */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(90,144,208,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(90,144,208,0.03) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      {/* Glow radial */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
       >
-        <div className="h-75 w-150 rounded-full bg-[#1a5fb0]/20 blur-[120px]" />
+        <div
+          className="h-100 w-175 blur-[80px]"
+          style={{
+            background:
+              'radial-gradient(ellipse at center, rgba(26,95,176,0.15) 0%, transparent 70%)',
+          }}
+        />
       </div>
 
-      <div className="relative mx-auto w-full max-w-4xl space-y-8 text-center">
+      <div className="relative z-10 mx-auto w-full max-w-4xl space-y-8 text-center">
         {/* Badge pill */}
         <motion.div
           initial={{ opacity: 0, y: -12 }}
@@ -29,7 +46,7 @@ export function Hero() {
         >
           <ShieldCheck className="h-3.5 w-3.5 animate-pulse text-[#5a90d0] opacity-70" />
           <span className="text-xs font-medium tracking-wide text-[#5a90d0]">
-            Votre partenaire électricité en Belgique
+            Électricité industrielle &amp; tertiaire en Belgique
           </span>
         </motion.div>
 
@@ -40,11 +57,11 @@ export function Hero() {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           className="text-4xl leading-[1.1] font-black tracking-tight text-[#eef2f8] sm:text-5xl md:text-6xl"
         >
-          L&apos;électricité industrielle
+          Votre partenaire électrique
           <br />
-          exécutée avec{' '}
+          pour bâtiments industriels &amp;{' '}
           <span className="bg-gradient-to-r from-[#5a90d0] to-[#1a5fb0] bg-clip-text text-transparent">
-            rigueur.
+            tertiaires.
           </span>
         </motion.h1>
 
@@ -53,9 +70,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
-          className="mx-auto max-w-2xl text-base leading-7 text-[#7a8a9a] sm:text-lg"
+          className="mx-auto max-w-2xl text-base leading-relaxed text-[#7a8a9a] md:text-lg"
         >
-          Installations, tableaux électriques et mise aux normes RGIE — Belgique, depuis 30 ans.
+          Nous accompagnons entreprises, promoteurs et gestionnaires de sites dans leurs projets électriques : installations, rénovations et mises en conformité, avec une exigence forte sur la sécurité, les délais et la fiabilité.
         </motion.p>
 
         {/* Boutons */}
@@ -71,18 +88,16 @@ export function Hero() {
           >
             Demander un devis
           </Link>
-          <Button
-            variant="ghost"
-            className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-transparent px-8 py-3 text-sm text-[#c8d8f0] hover:bg-white/10"
-            onClick={() =>
-              document
-                .querySelector('#expertise')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
+          <Link
+            href="/expertise"
+            className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-transparent px-8 py-3 text-sm text-[#c8d8f0] transition hover:bg-white/10"
           >
-            Voir nos réalisations
-          </Button>
+            Découvrir nos services
+          </Link>
         </motion.div>
+        <p className="mt-3 text-center text-xs text-[#7a8a9a]">
+          Réponse rapide — analyse professionnelle de votre besoin
+        </p>
       </div>
 
       {/* Shimmer keyframe */}

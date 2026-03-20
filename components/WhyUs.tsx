@@ -1,29 +1,36 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, Users, Clock } from 'lucide-react';
+import { ShieldCheck, Users, Clock, Zap } from 'lucide-react';
 
 const items = [
   {
     id: 'expertise',
     icon: ShieldCheck,
-    title: 'Expertise certifiée',
+    title: 'Expertise technique',
     description:
-      'Certifié VCA* depuis 2011, agréé RGIE Art.104. Nos techniciens interviennent en conformité totale sur chaque chantier, industriel comme tertiaire.',
+      'Des compétences adaptées aux installations industrielles et tertiaires, avec une maîtrise des normes en vigueur.',
   },
   {
-    id: 'interlocuteur',
+    id: 'suivi',
     icon: Users,
-    title: 'Interlocuteur unique',
+    title: 'Organisation claire',
     description:
-      "Un chef de chantier dédié du premier contact jusqu'à la réception des travaux. Vous savez toujours qui appeler.",
+      "Un responsable dédié par chantier, une communication directe et un suivi rigoureux à chaque étape.",
   },
   {
     id: 'reactivite',
     icon: Clock,
-    title: 'Réactivité terrain',
+    title: 'Réactivité',
     description:
-      'Réponse sous 48h garantie. Intervention rapide sur site pour les urgences. Basés en Belgique, nous connaissons vos contraintes.',
+      "Des équipes disponibles rapidement, avec une approche structurée qui limite les imprévus.",
+  },
+  {
+    id: 'durabilite',
+    icon: Zap,
+    title: 'Vision long terme',
+    description:
+      "Des installations fiables et durables, conçues pour résister aux exigences de votre activité.",
   },
 ];
 
@@ -43,13 +50,12 @@ export function WhyUs() {
   return (
     <section id="pourquoi" className="bg-[#0d1118] py-24 text-[#eef2f8]">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
-        <div className="mb-14 space-y-4 text-center">
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
-            Pourquoi choisir Luc Lion
+        <div className="text-center">
+          <h2 className="mb-4 text-3xl font-black text-[#eef2f8] md:text-4xl">
+            Une approche fiable et structurée
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-[#7a8a9a] sm:text-lg">
-            Trois raisons pour lesquelles les responsables techniques nous font
-            confiance.
+          <p className="mx-auto mb-12 max-w-2xl text-base text-[#7a8a9a] sm:text-lg">
+            Une organisation pensée pour répondre aux contraintes réelles du terrain.
           </p>
         </div>
 
@@ -58,13 +64,13 @@ export function WhyUs() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
           variants={parentVariants}
-          className="grid grid-cols-1 gap-10 md:grid-cols-3"
+          className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2"
         >
           {items.map(({ id, icon: Icon, title, description }) => (
             <motion.div
               key={id}
               variants={itemVariants}
-              className="border-l-2 border-[#1a5fb0] pl-6"
+              className="border-l-2 border-[#1a5fb0] pl-8"
             >
               <Icon className="mb-4 h-6 w-6 text-[#5a90d0]" />
               <p className="mb-2 text-base font-semibold text-[#eef2f8]">
