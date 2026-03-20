@@ -1,16 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, Navigation, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 
 const contactInfos = [
-  { icon: Phone, label: '+32 (0)4 227 30 30' },
+  { icon: Phone, label: '071/78 80 16' },
   { icon: Mail, label: 'info@luclion.be' },
-  { icon: MapPin, label: 'Wallonie · Bruxelles · Flandre' },
+  { icon: MapPin, label: 'Chau. de Charleroi 81, 5190 Jemeppe-sur-Sambre' },
 ];
 
 const typeOptions = [
@@ -52,11 +52,11 @@ export function Contact() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="mt-10 flex flex-col gap-3">
               {contactInfos.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="flex w-full items-center gap-3 rounded-xl border border-[#1a5fb0]/20 bg-[#111827] px-5 py-4 transition-colors duration-200 hover:border-[#1a5fb0]/50"
+                  className="flex w-full items-center gap-3 rounded-xl border border-[#1a5fb0]/20 bg-[#111827] px-5 py-4"
                 >
                   <div className="shrink-0 rounded-lg bg-[#1a5fb0]/15 p-2">
                     <Icon className="h-5 w-5 text-[#5a90d0]" />
@@ -64,6 +64,18 @@ export function Contact() {
                   <span className="whitespace-nowrap text-sm font-medium text-[#eef2f8]">{label}</span>
                 </div>
               ))}
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Chaussée+de+Charleroi+81,+5190+Jemeppe-sur-Sambre,+Belgique"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full cursor-pointer items-center gap-3 rounded-xl border border-[#1a5fb0]/40 bg-[#0d1a2e] px-5 py-4 transition-colors duration-200 hover:border-[#1a5fb0]/70 hover:bg-[#0d1a2e]"
+              >
+                <div className="shrink-0 rounded-lg bg-[#1a5fb0]/15 p-2">
+                  <Navigation className="h-5 w-5 text-[#5a90d0]" />
+                </div>
+                <span className="whitespace-nowrap text-sm font-semibold text-[#5a90d0]">{"Voir l'itinéraire"}</span>
+                <ArrowUpRight className="ml-auto h-4 w-4 text-[#5a90d0]" />
+              </a>
             </div>
 
             <p className="mt-4 flex items-center gap-2 text-xs text-[#7a8a9a]">
@@ -73,7 +85,7 @@ export function Contact() {
           </div>
 
           {/* Colonne droite — formulaire */}
-          <div className="rounded-2xl border border-[#1a5fb0]/20 bg-[#111827] p-8 lg:mt-36.25">
+          <div className="rounded-2xl border border-[#1a5fb0]/30 bg-[#111827] p-8 shadow-[0_0_40px_rgba(26,95,176,0.08)] lg:mt-46.25">
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               {/* Nom + Société */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -81,13 +93,13 @@ export function Contact() {
                   <Label htmlFor="nom" className="text-sm text-[#7a8a9a]">
                     Nom
                   </Label>
-                  <Input id="nom" placeholder="Jean Dupont" className={inputClass} />
+                  <Input id="nom" placeholder="Votre nom" className={inputClass} />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="societe" className="text-sm text-[#7a8a9a]">
                     Société
                   </Label>
-                  <Input id="societe" placeholder="Acme SA" className={inputClass} />
+                  <Input id="societe" placeholder="Nom de votre société" className={inputClass} />
                 </div>
               </div>
 
@@ -97,7 +109,7 @@ export function Contact() {
                   <Label htmlFor="email" className="text-sm text-[#7a8a9a]">
                     Email
                   </Label>
-                  <Input id="email" type="email" placeholder="jean@acme.be" className={inputClass} />
+                  <Input id="email" type="email" placeholder="votre@email.be" className={inputClass} />
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="tel" className="text-sm text-[#7a8a9a]">
@@ -136,7 +148,7 @@ export function Contact() {
                 <Textarea
                   id="message"
                   rows={4}
-                  placeholder="Décrivez votre projet, les contraintes, le site…"
+                  placeholder="Décrivez votre projet, le type de site, les contraintes…"
                   className={inputClass}
                 />
               </div>

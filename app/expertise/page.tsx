@@ -42,7 +42,7 @@ export default function ExpertisePage() {
         {/* Contenu */}
         <div className="relative z-10 mx-auto max-w-3xl px-6">
           <h1 className="text-4xl font-black leading-tight text-center text-[#eef2f8] md:text-5xl">
-            <span className="block">Notre expertise au service de</span>
+            <span className="block">Nos services au service de</span>
             <span className="block">
               vos installations{' '}
               <span className="bg-linear-to-r from-[#5a90d0] to-[#1a5fb0] bg-clip-text text-transparent">

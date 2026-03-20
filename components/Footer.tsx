@@ -40,7 +40,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/expertise" className="text-[#c8d8f0] transition hover:text-white">
-                  Expertise
+                  Services
                 </Link>
               </li>
               <li>
