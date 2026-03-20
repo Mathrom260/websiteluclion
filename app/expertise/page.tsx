@@ -11,14 +11,14 @@ const certifications = [
     icon: ShieldCheck,
     title: 'Certifié VCA*',
     description:
-      "Le label VCA* atteste que nos techniciens interviennent selon les normes de sécurité les plus strictes. Une exigence maintenue en continu depuis 2011, pour protéger vos équipes et vos installations.",
+      "La certification VCA* garantit que nos équipes interviennent selon les normes de sécurité les plus strictes. Pour vous, c'est la certitude d'une intervention sans risque, sur tout type de site.",
   },
   {
     id: 'rgie',
     icon: Award,
     title: 'Agréé RGIE Art.104',
     description:
-      "Notre agrément RGIE Art.104 garantit que toutes nos installations respectent le Règlement Général des Installations Électriques belge. Une obligation légale que nous traitons comme un standard minimal.",
+      "L'agrément RGIE Art.104 certifie la conformité totale de nos installations avec la réglementation électrique belge. Une garantie légale et technique sur chaque chantier.",
   },
 ];
 
@@ -28,17 +28,26 @@ export default function ExpertisePage() {
       <NavBar />
 
       {/* Header de page */}
-      <section className="bg-[#090c10] px-6 py-20 text-center md:px-8">
+      <section className="bg-[#090c10] px-6 pt-24 pb-12 text-center md:px-8">
         <div className="mx-auto w-full max-w-3xl">
-          <h1 className="mx-auto max-w-3xl text-4xl font-black text-[#eef2f8] md:text-5xl">
-            Expertise électrique pour environnements professionnels exigeants
+          <h1 className="text-4xl font-black leading-tight text-center text-[#eef2f8] md:text-5xl">
+            <span className="block">Notre expertise au service de</span>
+            <span className="block">
+              vos installations{' '}
+              <span className="bg-linear-to-r from-[#5a90d0] to-[#1a5fb0] bg-clip-text text-transparent">
+                électriques
+              </span>
+            </span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#7a8a9a]">
-            Des installations réalisées dans les règles de l&apos;art, par des
-            techniciens certifiés VCA* et agréés RGIE.
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#7a8a9a] md:text-lg">
+            Installations, mises en conformité et maintenance — réalisées par
+            des techniciens certifiés VCA* et agréés RGIE.
           </p>
         </div>
       </section>
+
+      {/* Séparateur */}
+      <div className="mx-auto max-w-6xl border-b border-white/6" />
 
       {/* Cards expertise */}
       <Expertise />
@@ -47,7 +56,7 @@ export default function ExpertisePage() {
       <Methode />
 
       {/* Certifications */}
-      <section className="bg-[#0d1118] py-20">
+      <section className="bg-[#0d1118] pt-24 pb-24">
         <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
           <div className="mb-12 space-y-3 text-center">
             <h2 className="text-2xl font-extrabold text-[#eef2f8] sm:text-3xl">
@@ -62,11 +71,13 @@ export default function ExpertisePage() {
             {certifications.map(({ id, icon: Icon, title, description }) => (
               <div
                 key={id}
-                className="rounded-xl border border-[#1a5fb0]/20 bg-[#0d1118] p-8 transition-colors duration-200 hover:border-[#1a5fb0]/40"
+                className="flex flex-col gap-3 rounded-xl border border-[#1a5fb0]/20 bg-[#0d1118] p-8 transition-colors duration-200 hover:border-[#1a5fb0]/40"
               >
-                <Icon className="h-6 w-6 text-[#5a90d0]" />
-                <p className="mt-4 text-lg font-semibold text-[#eef2f8]">{title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-[#7a8a9a]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0d1a2e]">
+                  <Icon className="h-6 w-6 text-[#5a90d0]" />
+                </div>
+                <p className="text-lg font-semibold text-[#eef2f8]">{title}</p>
+                <p className="text-sm leading-relaxed text-[#7a8a9a]">
                   {description}
                 </p>
               </div>
@@ -79,11 +90,11 @@ export default function ExpertisePage() {
       <section className="bg-[#090c10] py-24 text-center">
         <div className="mx-auto w-full max-w-2xl px-6 md:px-8">
           <h2 className="mx-auto max-w-2xl text-3xl font-black text-[#eef2f8] md:text-4xl">
-            Vous avez un projet électrique à réaliser ?
+            Un projet électrique à réaliser ?
           </h2>
           <p className="mx-auto mt-4 mb-8 max-w-xl text-base text-[#7a8a9a]">
-            Décrivez-nous votre besoin. Nous analysons votre situation et
-            revenons vers vous rapidement avec une proposition claire.
+            Contactez-nous. Nous analysons votre besoin et revenons vers vous
+            avec une proposition claire et adaptée.
           </p>
           <Link
             href="/contact"

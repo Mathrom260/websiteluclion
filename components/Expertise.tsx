@@ -28,30 +28,30 @@ const expertiseItems: ExpertiseCard[] = [
       "Conception et réalisation d'installations haute et basse tension sur sites industriels et tertiaires.",
   },
   {
-    id: 'batiments-tertiaires',
+    id: 'electricite-tertiaire',
     icon: Building2,
-    title: 'Bâtiments tertiaires',
+    title: 'Électricité tertiaire',
     description:
-      'Bureaux, commerces, hôtels et bâtiments publics. Installations complètes et conformes.',
+      'Bureaux, commerces et bâtiments publics. Installations complètes et conformes aux normes en vigueur.',
   },
   {
     id: 'tableaux-electriques',
     icon: LayoutGrid,
     title: 'Tableaux électriques',
     description:
-      'Conception et câblage de tableaux basse tension sur mesure, adaptés à vos besoins.',
+      'Conception, câblage et mise en service de tableaux basse tension sur mesure.',
   },
   {
-    id: 'mise-conformite-rgie',
+    id: 'mise-conformite',
     icon: ShieldCheck,
-    title: 'Mise en conformité RGIE',
+    title: 'Mise en conformité',
     description:
-      'Audit et remise aux normes de vos installations selon le RGIE Art.104.',
+      'Audit et remise aux normes RGIE de vos installations existantes. Conformité garantie.',
   },
   {
-    id: 'infrastructure-cablage',
+    id: 'cablage-infrastructure',
     icon: Cable,
-    title: 'Infrastructure & câblage',
+    title: 'Câblage & infrastructure',
     description:
       'Cheminements de câbles, goulottes et chemins de câbles pour tous types de sites.',
   },
@@ -60,7 +60,7 @@ const expertiseItems: ExpertiseCard[] = [
     icon: Wrench,
     title: 'Maintenance & dépannage',
     description:
-      'Contrats de maintenance préventive et interventions curatives rapides.',
+      "Contrats préventifs et interventions curatives rapides sur l'ensemble de vos installations.",
   },
 ];
 
@@ -78,7 +78,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: 'easeOut' },
+    transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] as const },
   },
 };
 
@@ -86,7 +86,7 @@ export function Expertise() {
   return (
     <section
       id="expertise"
-      className="bg-[#090c10] py-24 text-[#eef2f8]"
+      className="bg-[#090c10] pt-16 pb-16 text-[#eef2f8]"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="space-y-6 text-center">
