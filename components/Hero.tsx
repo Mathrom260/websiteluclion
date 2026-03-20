@@ -28,7 +28,7 @@ export function Hero() {
         >
           <ShieldCheck className="h-3.5 w-3.5 animate-pulse text-[#5a90d0] opacity-70" />
           <span className="text-xs font-medium tracking-wide text-[#5a90d0]">
-            Certifié VCA* · Agréé RGIE · Belgique
+            Votre partenaire électricité en Belgique
           </span>
         </motion.div>
 
