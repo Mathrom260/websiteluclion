@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export function CTAFinal() {
   return (
-    <section className="border-y border-[rgba(255,255,255,0.06)] bg-[#0d1118] py-24">
+    <section className="border-y border-white/6 bg-[#090c10] py-24">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

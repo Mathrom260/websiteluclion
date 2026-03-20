@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-0 flex-col items-center justify-center overflow-hidden px-6 pt-16 pb-12 text-center"
+      className="relative flex min-h-0 flex-col items-center justify-center overflow-hidden bg-[#090c10] px-6 pt-16 pb-12 text-center"
     >
       {/* Grid technique */}
       <div
@@ -17,24 +17,42 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(90,144,208,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(90,144,208,0.03) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
+            'linear-gradient(rgba(90,144,208,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(90,144,208,0.04) 1px, transparent 1px)',
+          backgroundSize: '64px 64px',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
         }}
       />
 
-      {/* Glow radial */}
+      {/* Glow principal animé */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 flex items-center justify-center"
-      >
-        <div
-          className="h-100 w-175 blur-[80px]"
-          style={{
-            background:
-              'radial-gradient(ellipse at center, rgba(26,95,176,0.15) 0%, transparent 70%)',
-          }}
-        />
-      </div>
+        className="pointer-events-none absolute"
+        style={{
+          width: '600px',
+          height: '300px',
+          borderRadius: '9999px',
+          background: 'radial-gradient(ellipse at center, rgba(26,95,176,0.18) 0%, transparent 70%)',
+          left: '50%',
+          top: '50%',
+          animation: 'glowPulse 6s ease-in-out infinite',
+        }}
+      />
+
+      {/* Second glow décalé */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute"
+        style={{
+          width: '400px',
+          height: '200px',
+          borderRadius: '9999px',
+          background: 'radial-gradient(ellipse at center, rgba(90,144,208,0.08) 0%, transparent 70%)',
+          left: '50%',
+          top: '50%',
+          animation: 'glowDrift 8s ease-in-out infinite',
+        }}
+      />
 
       <div className="relative z-10 mx-auto w-full max-w-4xl space-y-8 text-center">
         {/* Badge pill */}
@@ -101,8 +119,16 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Shimmer keyframe */}
+      {/* Keyframes */}
       <style>{`
+        @keyframes glowPulse {
+          0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+          50%       { opacity: 1;   transform: translate(-50%, -52%) scale(1.08); }
+        }
+        @keyframes glowDrift {
+          0%, 100% { opacity: 0.4; transform: translate(-30%, -60%) scale(1); }
+          50%       { opacity: 0.7; transform: translate(-35%, -65%) scale(1.05); }
+        }
         .shimmer-btn::after {
           content: '';
           position: absolute;
