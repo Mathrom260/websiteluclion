@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ShieldCheck } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label';
 const contactInfos = [
   { icon: Phone, label: '+32 (0)4 227 30 30' },
   { icon: Mail, label: 'info@luclion.be' },
-  { icon: MapPin, label: 'Belgique — Wallonie · Bruxelles · Flandre' },
+  { icon: MapPin, label: 'Wallonie · Bruxelles · Flandre' },
 ];
 
 const typeOptions = [
@@ -27,44 +27,53 @@ const inputClass =
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-[#090c10] py-24 text-[#eef2f8]">
+    <section id="contact" className="bg-[#090c10] py-20 text-[#eef2f8]">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55, ease: 'easeOut' }}
-          className="grid grid-cols-1 gap-12 lg:grid-cols-2"
+          className="grid grid-cols-1 gap-16 lg:grid-cols-2"
         >
           {/* Colonne gauche */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-extrabold leading-tight text-[#eef2f8] sm:text-4xl">
-                Un chantier à planifier ?{' '}
-                <span className="text-[#7a8a9a]">Parlons-en.</span>
+          <div className="flex flex-col gap-8">
+            <div>
+              <h2 className="leading-tight">
+                <span className="block text-3xl font-black text-[#eef2f8] md:text-4xl">
+                  Un chantier à planifier ?
+                </span>
+                <span className="block text-3xl font-black text-[#5a90d0] md:text-4xl">
+                  Parlons-en.
+                </span>
               </h2>
-              <p className="text-base leading-7 text-[#7a8a9a]">
+              <p className="mt-3 text-base leading-7 text-[#7a8a9a]">
                 Décrivez-nous votre projet. Nous revenons vers vous sous 48h.
               </p>
             </div>
 
-            <ul className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
               {contactInfos.map(({ icon: Icon, label }) => (
-                <li
+                <div
                   key={label}
-                  className="flex items-center gap-4 rounded-xl border border-[#1a5fb0]/20 bg-[#111827] px-5 py-4 transition-colors duration-200 hover:border-[#1a5fb0]/50"
+                  className="flex w-full items-center gap-3 rounded-xl border border-[#1a5fb0]/20 bg-[#111827] px-5 py-4 transition-colors duration-200 hover:border-[#1a5fb0]/50"
                 >
                   <div className="shrink-0 rounded-lg bg-[#1a5fb0]/15 p-2">
                     <Icon className="h-5 w-5 text-[#5a90d0]" />
                   </div>
-                  <span className="text-sm font-medium text-[#eef2f8]">{label}</span>
-                </li>
+                  <span className="whitespace-nowrap text-sm font-medium text-[#eef2f8]">{label}</span>
+                </div>
               ))}
-            </ul>
+            </div>
+
+            <p className="mt-4 flex items-center gap-2 text-xs text-[#7a8a9a]">
+              <ShieldCheck className="h-3 w-3 text-[#5a90d0]" />
+              Réponse garantie sous 48h · Aucun engagement
+            </p>
           </div>
 
           {/* Colonne droite — formulaire */}
-          <div className="rounded-2xl border border-[#1a5fb0]/20 bg-[#111827] p-8">
+          <div className="rounded-2xl border border-[#1a5fb0]/20 bg-[#111827] p-8 lg:mt-[160px]">
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               {/* Nom + Société */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
