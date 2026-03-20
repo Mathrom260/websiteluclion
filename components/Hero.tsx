@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -64,16 +65,12 @@ export function Hero() {
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
           className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
         >
-          <button
-            onClick={() =>
-              document
-                .querySelector('#contact')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
+          <Link
+            href="/contact"
             className="shimmer-btn relative overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#1650a0]"
           >
             Demander un devis
-          </button>
+          </Link>
           <Button
             variant="ghost"
             className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-transparent px-8 py-3 text-sm text-[#c8d8f0] hover:bg-white/10"
