@@ -51,13 +51,13 @@ const lineVariants = {
 
 export function Methode() {
   return (
-    <section className="bg-[#090c10] py-16 text-[#eef2f8]">
+    <section className="bg-[#1a2035] py-16 text-[#eef2f8]">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="mb-12 space-y-4 text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Comment nous intervenons
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-[#7a8a9a] sm:text-lg">
+          <p className="mx-auto max-w-2xl text-base text-[#8a9ab8] sm:text-lg">
             Une approche structurée pour chaque projet, quelle que soit sa complexité.
           </p>
         </div>
@@ -71,7 +71,7 @@ export function Methode() {
             viewport={{ once: true, amount: 0.3 }}
             variants={lineVariants}
             style={{ originX: 0 }}
-            className="absolute top-8 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] hidden h-px border-t border-dashed border-[#1a5fb0]/30 lg:block"
+            className="absolute top-8 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] hidden h-px border-t border-dashed border-[#2a6fd6]/30 lg:block"
           />
 
           <motion.div
@@ -85,23 +85,23 @@ export function Methode() {
               <motion.div
                 key={id}
                 variants={itemVariants}
-                className="relative flex flex-col rounded-xl border border-white/6 bg-[#090c10] p-7 transition-all duration-300 hover:border-[#1a5fb0]/40 hover:shadow-[0_0_20px_rgba(26,95,176,0.08)]"
+                className="relative flex flex-col rounded-xl border border-white/6 bg-[#1a2035] p-7 transition-all duration-300 hover:border-[#2a6fd6]/40 hover:shadow-[0_0_20px_rgba(42,111,214,0.08)]"
               >
                 {/* Ligne verticale mobile */}
                 <div
                   aria-hidden
-                  className="absolute top-0 bottom-0 left-5 w-px bg-linear-to-b from-[#1a5fb0]/60 to-transparent lg:hidden"
+                  className="absolute top-0 bottom-0 left-5 w-px bg-linear-to-b from-[#2a6fd6]/60 to-transparent lg:hidden"
                 />
 
-                <p className="font-mono text-5xl font-black leading-none text-[#5a90d0]/50">
+                <p className="font-mono text-5xl font-black leading-none text-[#7ab0e8]/50">
                   {num}
                 </p>
 
-                <div className="mt-4 mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0d1a2e]">
-                  <Icon className="h-5 w-5 text-[#5a90d0]" />
+                <div className="mt-4 mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#1e2840]">
+                  <Icon className="h-5 w-5 text-[#7ab0e8]" />
                 </div>
                 <p className="text-base font-semibold text-[#eef2f8]">{title}</p>
-                <p className="mt-1 text-sm leading-relaxed text-[#7a8a9a]">
+                <p className="mt-1 text-sm leading-relaxed text-[#8a9ab8]">
                   {description}
                 </p>
               </motion.div>

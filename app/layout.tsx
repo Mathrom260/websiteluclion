@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="bg-[#090c10] text-[#eef2f8]">
+    <html lang="fr" className="bg-[#1a2035] text-[#eef2f8]">
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );

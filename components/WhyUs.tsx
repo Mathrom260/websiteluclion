@@ -48,13 +48,13 @@ const itemVariants = {
 
 export function WhyUs() {
   return (
-    <section id="pourquoi" className="bg-[#0d1118] py-24 text-[#eef2f8]">
+    <section id="pourquoi" className="bg-[#243050] py-24 text-[#eef2f8]">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="text-center">
           <h2 className="mb-4 text-3xl font-black text-[#eef2f8] md:text-4xl">
             Une approche fiable et structurée
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-base text-[#7a8a9a] sm:text-lg">
+          <p className="mx-auto mb-12 max-w-2xl text-base text-[#8a9ab8] sm:text-lg">
             Une organisation pensée pour répondre aux contraintes réelles du terrain.
           </p>
         </div>
@@ -70,13 +70,13 @@ export function WhyUs() {
             <motion.div
               key={id}
               variants={itemVariants}
-              className="border-l-2 border-[#1a5fb0] pl-8"
+              className="border-l-2 border-[#2a6fd6] pl-8"
             >
-              <Icon className="mb-4 h-6 w-6 text-[#5a90d0]" />
+              <Icon className="mb-4 h-6 w-6 text-[#7ab0e8]" />
               <p className="mb-2 text-base font-semibold text-[#eef2f8]">
                 {title}
               </p>
-              <p className="text-sm leading-relaxed text-[#7a8a9a]">
+              <p className="text-sm leading-relaxed text-[#8a9ab8]">
                 {description}
               </p>
             </motion.div>

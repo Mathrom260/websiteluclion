@@ -63,7 +63,7 @@ function StatItem({
       <span className="text-5xl font-black tabular-nums text-[#eef2f8]">
         {isStatic ? staticValue : `${prefix ?? ''}${count}${suffix ?? ''}`}
       </span>
-      <span className="mt-2 text-sm text-[#7a8a9a]">{label}</span>
+      <span className="mt-2 text-sm text-[#8a9ab8]">{label}</span>
     </motion.div>
   );
 }
@@ -73,7 +73,7 @@ export function Stats() {
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section ref={ref} className="border-y border-white/6 bg-[#090c10] py-20">
+    <section ref={ref} className="border-y border-white/6 bg-[#1a2035] py-20">
       <motion.div
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}

@@ -24,7 +24,7 @@ const certifications = [
 
 export default function ExpertisePage() {
   return (
-    <main className="min-h-screen bg-[#090c10] text-[#eef2f8]">
+    <main className="min-h-screen bg-[#1a2035] text-[#eef2f8]">
       <NavBar />
 
       {/* Header de page */}
@@ -37,7 +37,7 @@ export default function ExpertisePage() {
         }}
       >
         {/* Overlay */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[rgba(9,12,16,0.82)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[rgba(26,32,53,0.82)]" />
 
         {/* Contenu */}
         <div className="relative z-10 mx-auto max-w-3xl px-6">
@@ -45,7 +45,7 @@ export default function ExpertisePage() {
             <span className="block">Nos services au service de</span>
             <span className="block">
               vos installations{' '}
-              <span className="bg-linear-to-r from-[#5a90d0] to-[#1a5fb0] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#7ab0e8] to-[#2a6fd6] bg-clip-text text-transparent">
                 électriques
               </span>
             </span>
@@ -67,13 +67,13 @@ export default function ExpertisePage() {
       <Methode />
 
       {/* Certifications */}
-      <section className="bg-[#0d1118] pt-24 pb-24">
+      <section className="bg-[#243050] pt-24 pb-24">
         <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
           <div className="mb-12 space-y-3 text-center">
             <h2 className="text-2xl font-extrabold text-[#eef2f8] sm:text-3xl">
               Certifications &amp; conformité
             </h2>
-            <p className="mx-auto max-w-2xl text-sm text-[#7a8a9a]">
+            <p className="mx-auto max-w-2xl text-sm text-[#8a9ab8]">
               Nos accréditations ne sont pas que des labels — elles garantissent
               la sécurité et la conformité de chaque intervention.
             </p>
@@ -82,13 +82,13 @@ export default function ExpertisePage() {
             {certifications.map(({ id, icon: Icon, title, description }) => (
               <div
                 key={id}
-                className="flex flex-col gap-3 rounded-xl border border-[#1a5fb0]/20 bg-[#0d1118] p-8 transition-colors duration-200 hover:border-[#1a5fb0]/40"
+                className="flex flex-col gap-3 rounded-xl border border-[#2a6fd6]/20 bg-[#243050] p-8 transition-colors duration-200 hover:border-[#2a6fd6]/40"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0d1a2e]">
-                  <Icon className="h-6 w-6 text-[#5a90d0]" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1e2840]">
+                  <Icon className="h-6 w-6 text-[#7ab0e8]" />
                 </div>
                 <p className="text-lg font-semibold text-[#eef2f8]">{title}</p>
-                <p className="text-sm leading-relaxed text-[#7a8a9a]">
+                <p className="text-sm leading-relaxed text-[#8a9ab8]">
                   {description}
                 </p>
               </div>
@@ -98,18 +98,18 @@ export default function ExpertisePage() {
       </section>
 
       {/* CTA final */}
-      <section className="bg-[#090c10] py-24 text-center">
+      <section className="bg-[#1a2035] py-24 text-center">
         <div className="mx-auto w-full max-w-2xl px-6 md:px-8">
           <h2 className="mx-auto max-w-2xl text-3xl font-black text-[#eef2f8] md:text-4xl">
             Un projet électrique à réaliser ?
           </h2>
-          <p className="mx-auto mt-4 mb-8 max-w-xl text-base text-[#7a8a9a]">
+          <p className="mx-auto mt-4 mb-8 max-w-xl text-base text-[#8a9ab8]">
             Contactez-nous. Nous analysons votre besoin et revenons vers vous
             avec une proposition claire et adaptée.
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-lg bg-[#1a5fb0] px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1a5fb0]/90 hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
+            className="inline-block rounded-lg bg-[#2a6fd6] px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#2a6fd6]/90 hover:shadow-[0_0_20px_rgba(42,111,214,0.4)]"
           >
             Demander un devis
           </Link>

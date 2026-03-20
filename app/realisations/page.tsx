@@ -56,7 +56,7 @@ export default function RealisationsPage() {
       : projets.filter((p) => p.categorie === filtreActif);
 
   return (
-    <main className="min-h-screen bg-[#090c10] text-[#eef2f8]">
+    <main className="min-h-screen bg-[#1a2035] text-[#eef2f8]">
       <NavBar />
 
       {/* Header de page */}
@@ -68,7 +68,7 @@ export default function RealisationsPage() {
           backgroundPosition: '50% 30%',
         }}
       >
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[rgba(9,12,16,0.82)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[rgba(26,32,53,0.82)]" />
         <div className="relative z-10 mx-auto max-w-3xl px-6">
           <h1 className="whitespace-nowrap text-3xl font-black leading-tight text-center text-[#eef2f8] md:text-5xl">
             Nos réalisations sur le terrain
@@ -83,7 +83,7 @@ export default function RealisationsPage() {
       <div className="mx-auto max-w-6xl border-b border-white/6" />
 
       {/* Filtres + Grille */}
-      <section className="bg-[#0d1118] py-20">
+      <section className="bg-[#243050] py-20">
         <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
 
           {/* Boutons filtre */}
@@ -96,8 +96,8 @@ export default function RealisationsPage() {
                   onClick={() => setFiltreActif(filtre)}
                   className={`rounded-full border px-5 py-2 text-sm font-medium transition-colors duration-200 ${
                     actif
-                      ? 'border-[#1a5fb0] bg-[#1a5fb0] text-white'
-                      : 'border-white/20 bg-transparent text-[#7a8a9a] hover:border-white/40 hover:text-[#eef2f8]'
+                      ? 'border-[#2a6fd6] bg-[#2a6fd6] text-white'
+                      : 'border-white/20 bg-transparent text-[#8a9ab8] hover:border-white/40 hover:text-[#eef2f8]'
                   }`}
                 >
                   {filtre}
@@ -111,23 +111,23 @@ export default function RealisationsPage() {
             {projetsFiltres.map((projet) => (
               <div
                 key={`${projet.titre}-${projet.lieu}`}
-                className="group overflow-hidden rounded-xl border border-white/[0.06] bg-[#0d1118]"
+                className="group overflow-hidden rounded-xl border border-white/[0.06] bg-[#243050]"
               >
                 {/* Zone image placeholder */}
-                <div className="relative h-48 bg-[#0d1a2e] flex items-center justify-center overflow-hidden">
-                  <Zap className="h-16 w-16 text-[#1a5fb0]/30 transition-all duration-300 group-hover:text-[#1a5fb0]/20" />
-                  <div className="pointer-events-none absolute inset-0 bg-[#1a5fb0]/0 transition-all duration-300 group-hover:bg-[#1a5fb0]/10" />
-                  <ArrowUpRight className="absolute right-4 top-4 h-5 w-5 text-[#5a90d0] opacity-0 transition-all duration-300 group-hover:opacity-100" />
+                <div className="relative h-48 bg-[#1e2840] flex items-center justify-center overflow-hidden">
+                  <Zap className="h-16 w-16 text-[#2a6fd6]/30 transition-all duration-300 group-hover:text-[#2a6fd6]/20" />
+                  <div className="pointer-events-none absolute inset-0 bg-[#2a6fd6]/0 transition-all duration-300 group-hover:bg-[#2a6fd6]/10" />
+                  <ArrowUpRight className="absolute right-4 top-4 h-5 w-5 text-[#7ab0e8] opacity-0 transition-all duration-300 group-hover:opacity-100" />
                 </div>
 
                 {/* Contenu */}
                 <div className="p-6">
-                  <span className="inline-block rounded-full border border-[#1a5fb0]/20 bg-[#0d1a2e] px-3 py-1 text-xs text-[#5a90d0]">
+                  <span className="inline-block rounded-full border border-[#2a6fd6]/20 bg-[#1e2840] px-3 py-1 text-xs text-[#7ab0e8]">
                     {projet.categorie}
                   </span>
                   <p className="mt-3 text-base font-semibold text-[#eef2f8]">{projet.titre}</p>
-                  <p className="mt-1 text-sm text-[#7a8a9a]">{projet.detail}</p>
-                  <p className="mt-2 flex items-center gap-1 text-xs text-[#7a8a9a]">
+                  <p className="mt-1 text-sm text-[#8a9ab8]">{projet.detail}</p>
+                  <p className="mt-2 flex items-center gap-1 text-xs text-[#8a9ab8]">
                     <MapPin className="h-3 w-3" />
                     {projet.lieu}
                   </p>
@@ -139,28 +139,28 @@ export default function RealisationsPage() {
           {/* Micro preuve */}
           <div className="mt-16 border-t border-white/[0.06] py-12">
             <div className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row sm:gap-12">
-              <span className="text-sm text-[#7a8a9a]">+500 chantiers réalisés</span>
+              <span className="text-sm text-[#8a9ab8]">+500 chantiers réalisés</span>
               <span className="hidden h-4 w-px bg-white/10 sm:block" />
-              <span className="text-sm text-[#7a8a9a]">Belgique</span>
+              <span className="text-sm text-[#8a9ab8]">Belgique</span>
               <span className="hidden h-4 w-px bg-white/10 sm:block" />
-              <span className="text-sm text-[#7a8a9a]">Industriel &amp; tertiaire</span>
+              <span className="text-sm text-[#8a9ab8]">Industriel &amp; tertiaire</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA final */}
-      <section className="bg-[#090c10] py-24 text-center">
+      <section className="bg-[#1a2035] py-24 text-center">
         <div className="mx-auto w-full max-w-2xl px-6 md:px-8">
           <h2 className="text-3xl font-black text-[#eef2f8] md:text-4xl">
             Un projet similaire ?
           </h2>
-          <p className="mx-auto mt-4 mb-8 max-w-xl text-base text-[#7a8a9a]">
+          <p className="mx-auto mt-4 mb-8 max-w-xl text-base text-[#8a9ab8]">
             Contactez-nous pour discuter de votre besoin.
           </p>
           <Link
             href="/contact"
-            className="inline-block rounded-lg bg-[#1a5fb0] px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1a5fb0]/90 hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
+            className="inline-block rounded-lg bg-[#2a6fd6] px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#2a6fd6]/90 hover:shadow-[0_0_20px_rgba(42,111,214,0.4)]"
           >
             Discuter de votre besoin
           </Link>

@@ -11,8 +11,8 @@ const tickerItems = [...clients, ...clients];
 
 export function ClientsTicker() {
   return (
-    <section className="border-y border-white/6 bg-[#0d1118] py-12">
-      <p className="mb-8 text-center text-xs font-medium uppercase tracking-widest text-[#7a8a9a]">
+    <section className="border-y border-white/6 bg-[#243050] py-12">
+      <p className="mb-8 text-center text-xs font-medium uppercase tracking-widest text-[#8a9ab8]">
         Ils nous font confiance
       </p>
 

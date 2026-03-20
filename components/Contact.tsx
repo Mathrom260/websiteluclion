@@ -23,11 +23,11 @@ const typeOptions = [
 ];
 
 const inputClass =
-  'rounded-lg border border-white/10 bg-[#0d1118] text-[#eef2f8] placeholder:text-[#7a8a9a] transition-colors hover:border-white/20 focus-visible:border-[#1a5fb0] focus-visible:outline-none focus-visible:ring-0';
+  'rounded-lg border border-white/10 bg-[#243050] text-[#eef2f8] placeholder:text-[#8a9ab8] transition-colors hover:border-white/20 focus-visible:border-[#2a6fd6] focus-visible:outline-none focus-visible:ring-0';
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-[#090c10] py-20 text-[#eef2f8]">
+    <section id="contact" className="bg-[#1a2035] py-20 text-[#eef2f8]">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -43,11 +43,11 @@ export function Contact() {
                 <span className="block text-3xl font-black text-[#eef2f8] md:text-4xl">
                   Un chantier à planifier ?
                 </span>
-                <span className="block text-3xl font-black text-[#5a90d0] md:text-4xl">
+                <span className="block text-3xl font-black text-[#7ab0e8] md:text-4xl">
                   Parlons-en.
                 </span>
               </h2>
-              <p className="mt-3 text-base leading-7 text-[#7a8a9a]">
+              <p className="mt-3 text-base leading-7 text-[#8a9ab8]">
                 Décrivez-nous votre projet.
               </p>
             </div>
@@ -56,10 +56,10 @@ export function Contact() {
               {contactInfos.map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="flex w-full items-center gap-3 rounded-xl border border-[#1a5fb0]/20 bg-[#111827] px-5 py-4"
+                  className="flex w-full items-center gap-3 rounded-xl border border-[#2a6fd6]/20 bg-[#243050] px-5 py-4"
                 >
-                  <div className="shrink-0 rounded-lg bg-[#1a5fb0]/15 p-2">
-                    <Icon className="h-5 w-5 text-[#5a90d0]" />
+                  <div className="shrink-0 rounded-lg bg-[#2a6fd6]/15 p-2">
+                    <Icon className="h-5 w-5 text-[#7ab0e8]" />
                   </div>
                   <span className="whitespace-nowrap text-sm font-medium text-[#eef2f8]">{label}</span>
                 </div>
@@ -68,35 +68,35 @@ export function Contact() {
                 href="https://www.google.com/maps/search/?api=1&query=Chaussée+de+Charleroi+81,+5190+Jemeppe-sur-Sambre,+Belgique"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full cursor-pointer items-center gap-3 rounded-xl border border-[#1a5fb0]/40 bg-[#0d1a2e] px-5 py-4 transition-colors duration-200 hover:border-[#1a5fb0]/70 hover:bg-[#0d1a2e]"
+                className="flex w-full cursor-pointer items-center gap-3 rounded-xl border border-[#2a6fd6]/40 bg-[#1e2840] px-5 py-4 transition-colors duration-200 hover:border-[#2a6fd6]/70 hover:bg-[#1e2840]"
               >
-                <div className="shrink-0 rounded-lg bg-[#1a5fb0]/15 p-2">
-                  <Navigation className="h-5 w-5 text-[#5a90d0]" />
+                <div className="shrink-0 rounded-lg bg-[#2a6fd6]/15 p-2">
+                  <Navigation className="h-5 w-5 text-[#7ab0e8]" />
                 </div>
-                <span className="whitespace-nowrap text-sm font-semibold text-[#5a90d0]">{"Voir l'itinéraire"}</span>
-                <ArrowUpRight className="ml-auto h-4 w-4 text-[#5a90d0]" />
+                <span className="whitespace-nowrap text-sm font-semibold text-[#7ab0e8]">{"Voir l'itinéraire"}</span>
+                <ArrowUpRight className="ml-auto h-4 w-4 text-[#7ab0e8]" />
               </a>
             </div>
 
-            <p className="mt-4 flex items-center gap-2 text-xs text-[#7a8a9a]">
-              <ShieldCheck className="h-3 w-3 text-[#5a90d0]" />
+            <p className="mt-4 flex items-center gap-2 text-xs text-[#8a9ab8]">
+              <ShieldCheck className="h-3 w-3 text-[#7ab0e8]" />
               Réponse rapide · Sans engagement
             </p>
           </div>
 
           {/* Colonne droite — formulaire */}
-          <div className="rounded-2xl border border-[#1a5fb0]/30 bg-[#111827] p-8 shadow-[0_0_40px_rgba(26,95,176,0.08)] lg:mt-46.25">
+          <div className="rounded-2xl border border-[#2a6fd6]/30 bg-[#243050] p-8 shadow-[0_0_40px_rgba(42,111,214,0.08)] lg:mt-46.25">
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               {/* Nom + Société */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-1.5">
-                  <Label htmlFor="nom" className="text-sm text-[#7a8a9a]">
+                  <Label htmlFor="nom" className="text-sm text-[#8a9ab8]">
                     Nom
                   </Label>
                   <Input id="nom" placeholder="Votre nom" className={inputClass} />
                 </div>
                 <div className="space-y-1.5">
-                  <Label htmlFor="societe" className="text-sm text-[#7a8a9a]">
+                  <Label htmlFor="societe" className="text-sm text-[#8a9ab8]">
                     Société
                   </Label>
                   <Input id="societe" placeholder="Nom de votre société" className={inputClass} />
@@ -106,13 +106,13 @@ export function Contact() {
               {/* Email + Téléphone */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-1.5">
-                  <Label htmlFor="email" className="text-sm text-[#7a8a9a]">
+                  <Label htmlFor="email" className="text-sm text-[#8a9ab8]">
                     Email
                   </Label>
                   <Input id="email" type="email" placeholder="votre@email.be" className={inputClass} />
                 </div>
                 <div className="space-y-1.5">
-                  <Label htmlFor="tel" className="text-sm text-[#7a8a9a]">
+                  <Label htmlFor="tel" className="text-sm text-[#8a9ab8]">
                     Téléphone
                   </Label>
                   <Input id="tel" type="tel" placeholder="+32 4 00 00 00 00" className={inputClass} />
@@ -121,19 +121,19 @@ export function Contact() {
 
               {/* Type de chantier */}
               <div className="space-y-1.5">
-                <Label htmlFor="type" className="text-sm text-[#7a8a9a]">
+                <Label htmlFor="type" className="text-sm text-[#8a9ab8]">
                   Type de chantier
                 </Label>
                 <select
                   id="type"
                   defaultValue=""
-                  className="w-full rounded-lg border border-white/10 bg-[#0d1118] px-3 py-2 text-sm text-[#eef2f8] outline-none focus:border-[#1a5fb0]"
+                  className="w-full rounded-lg border border-white/10 bg-[#243050] px-3 py-2 text-sm text-[#eef2f8] outline-none focus:border-[#2a6fd6]"
                 >
-                  <option value="" disabled className="text-[#7a8a9a]">
+                  <option value="" disabled className="text-[#8a9ab8]">
                     Sélectionnez un type
                   </option>
                   {typeOptions.map((opt) => (
-                    <option key={opt} value={opt} className="bg-[#0d1118]">
+                    <option key={opt} value={opt} className="bg-[#243050]">
                       {opt}
                     </option>
                   ))}
@@ -142,7 +142,7 @@ export function Contact() {
 
               {/* Message */}
               <div className="space-y-1.5">
-                <Label htmlFor="message" className="text-sm text-[#7a8a9a]">
+                <Label htmlFor="message" className="text-sm text-[#8a9ab8]">
                   Message
                 </Label>
                 <Textarea
@@ -156,7 +156,7 @@ export function Contact() {
               {/* Bouton */}
               <Button
                 type="submit"
-                className="w-full rounded-lg bg-[#1a5fb0] py-3 font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1a5fb0]/90 hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
+                className="w-full rounded-lg bg-[#2a6fd6] py-3 font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#2a6fd6]/90 hover:shadow-[0_0_20px_rgba(42,111,214,0.4)]"
               >
                 Envoyer ma demande
               </Button>

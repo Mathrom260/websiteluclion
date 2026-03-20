@@ -12,7 +12,7 @@ const items = [
 
 export function TrustBar() {
   return (
-    <section className="bg-[#0e1422] py-12">
+    <section className="bg-[#151c2e] py-12">
       <div className="mx-auto max-w-6xl px-8">
         <motion.div
           initial="hidden"
@@ -31,10 +31,10 @@ export function TrustBar() {
                 hidden: { opacity: 0, y: 24 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
               }}
-              className="flex flex-col items-center justify-center gap-2 rounded-xl border border-[#1a5fb0]/20 bg-[#0d1a2e] px-2 py-4 text-center transition-all duration-200 hover:border-[#1a5fb0]/40 hover:bg-[#111827] hover:shadow-[0_0_20px_rgba(26,95,176,0.15)]"
+              className="flex flex-col items-center justify-center gap-2 rounded-xl border border-[#2a6fd6]/20 bg-[#1e2840] px-2 py-4 text-center transition-all duration-200 hover:border-[#2a6fd6]/40 hover:bg-[#243050] hover:shadow-[0_0_20px_rgba(42,111,214,0.15)]"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0d1a2e]">
-                <Icon className="h-4 w-4 text-[#5a90d0]" />
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#1e2840]">
+                <Icon className="h-4 w-4 text-[#7ab0e8]" />
               </div>
               <span className="whitespace-nowrap text-sm font-semibold text-[#eef2f8]">{label}</span>
             </motion.div>

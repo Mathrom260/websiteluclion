@@ -9,7 +9,7 @@ export function Footer() {
   const isContact = pathname === '/contact';
 
   return (
-    <footer className="border-t border-[rgba(255,255,255,0.06)] bg-[#080b0f] text-[#eef2f8]">
+    <footer className="border-t border-[rgba(255,255,255,0.06)] bg-[#151c2e] text-[#eef2f8]">
       <div className="mx-auto w-full max-w-6xl px-6 py-12 md:px-8">
         <div className={`grid grid-cols-1 gap-10 ${isContact ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
           {/* Logo + tagline */}
@@ -22,14 +22,14 @@ export function Footer() {
               unoptimized={true}
               style={{ objectFit: 'contain' }}
             />
-            <p className="text-sm text-[#7a8a9a]">
+            <p className="text-sm text-[#8a9ab8]">
               Électricité industrielle &amp; tertiaire en Belgique
             </p>
           </div>
 
           {/* Navigation */}
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#7a8a9a]">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#8a9ab8]">
               Navigation
             </p>
             <ul className="space-y-2 text-sm">
@@ -59,18 +59,18 @@ export function Footer() {
           {/* Colonne contact — masquée sur /contact */}
           {!isContact && (
             <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#7a8a9a]">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#8a9ab8]">
                 Contact
               </p>
               <ul className="space-y-2 text-sm text-[#c8d8f0]">
-                <li>+32 (0)4 227 30 30</li>
+                <li>071/78 80 16</li>
                 <li>info@luclion.be</li>
               </ul>
             </div>
           )}
         </div>
 
-        <div className="mt-10 border-t border-[rgba(255,255,255,0.06)] pt-6 text-center text-xs text-[#7a8a9a]">
+        <div className="mt-10 border-t border-[rgba(255,255,255,0.06)] pt-6 text-center text-xs text-[#8a9ab8]">
           © 2025 Luc Lion SA · Tous droits réservés
         </div>
       </div>

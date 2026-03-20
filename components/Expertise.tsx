@@ -86,14 +86,14 @@ export function Expertise() {
   return (
     <section
       id="expertise"
-      className="bg-[#0d1118] pt-16 pb-16 text-[#eef2f8]"
+      className="bg-[#243050] pt-16 pb-16 text-[#eef2f8]"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="space-y-6 text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Domaines d&apos;intervention
           </h2>
-          <p className="mx-auto max-w-3xl text-base text-[#7a8a9a] sm:text-lg">
+          <p className="mx-auto max-w-3xl text-base text-[#8a9ab8] sm:text-lg">
             Une couverture complète de vos besoins électriques, du neuf à la
             mise en conformité.
           </p>
@@ -112,7 +112,7 @@ export function Expertise() {
             <motion.article
               key={item.id}
               variants={cardVariants}
-              className="flex flex-col gap-4 rounded-xl border border-white/6 bg-[#0d1118] p-8 transition-all duration-200 hover:-translate-y-1 hover:border-[#1a5fb0]/40 hover:shadow-[0_0_24px_rgba(26,95,176,0.12)]"
+              className="flex flex-col gap-4 rounded-xl border border-white/6 bg-[#243050] p-8 transition-all duration-200 hover:-translate-y-1 hover:border-[#2a6fd6]/40 hover:shadow-[0_0_24px_rgba(42,111,214,0.12)]"
             >
               {item.image ? (
                 <div className="relative h-48 w-full">
@@ -127,13 +127,13 @@ export function Expertise() {
                 </div>
               ) : null}
 
-              <div className="flex shrink-0 items-center justify-center rounded-lg bg-[#0d1a2e] p-2.5">
-                <Icon className="h-5 w-5 text-[#5a90d0]" />
+              <div className="flex shrink-0 items-center justify-center rounded-lg bg-[#1e2840] p-2.5">
+                <Icon className="h-5 w-5 text-[#7ab0e8]" />
               </div>
               <p className="text-[15px] font-semibold text-[#eef2f8]">
                 {item.title}
               </p>
-              <p className="text-sm leading-relaxed text-[#7a8a9a]">
+              <p className="text-sm leading-relaxed text-[#8a9ab8]">
                 {item.description}
               </p>
             </motion.article>

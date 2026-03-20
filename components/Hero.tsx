@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[50vh] w-full flex-col items-center justify-center overflow-hidden bg-[#0b0f1a] px-6 pt-16 pb-12 text-center lg:px-12"
+      className="relative flex min-h-[50vh] w-full flex-col items-center justify-center overflow-hidden bg-[#1a2035] px-6 pt-16 pb-12 text-center lg:px-12"
     >
       {/* Vidéo de fond */}
       <video
@@ -29,7 +29,7 @@ export function Hero() {
       </video>
 
       {/* Overlay sombre */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-[rgba(9,12,16,0.70)]" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 bg-[rgba(26,32,53,0.70)]" />
 
       {/* Background parallax */}
       <motion.div
@@ -42,7 +42,7 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'linear-gradient(rgba(90,144,208,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(90,144,208,0.04) 1px, transparent 1px)',
+              'linear-gradient(rgba(122,176,232,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(122,176,232,0.04) 1px, transparent 1px)',
             backgroundSize: '64px 64px',
             maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
             WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
@@ -56,7 +56,7 @@ export function Hero() {
             width: '600px',
             height: '300px',
             borderRadius: '9999px',
-            background: 'radial-gradient(ellipse at center, rgba(26,95,176,0.18) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse at center, rgba(42,111,214,0.18) 0%, transparent 70%)',
             left: '50%',
             top: '50%',
             animation: 'glowPulse 6s ease-in-out infinite',
@@ -70,7 +70,7 @@ export function Hero() {
             width: '400px',
             height: '200px',
             borderRadius: '9999px',
-            background: 'radial-gradient(ellipse at center, rgba(90,144,208,0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse at center, rgba(122,176,232,0.08) 0%, transparent 70%)',
             left: '50%',
             top: '50%',
             animation: 'glowDrift 8s ease-in-out infinite',
@@ -85,10 +85,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#5a90d0]/40 bg-[#0d1a2e] px-4 py-1.5"
+          className="inline-flex items-center gap-2 rounded-full border border-[#7ab0e8]/40 bg-[#1e2840] px-4 py-1.5"
         >
-          <ShieldCheck className="h-3.5 w-3.5 animate-pulse text-[#5a90d0] opacity-70" />
-          <span className="text-xs font-medium tracking-wide text-[#5a90d0]">
+          <ShieldCheck className="h-3.5 w-3.5 animate-pulse text-[#7ab0e8] opacity-70" />
+          <span className="text-xs font-medium tracking-wide text-[#7ab0e8]">
             Spécialiste des installations électriques professionnelles
           </span>
         </motion.div>
@@ -102,7 +102,7 @@ export function Hero() {
           style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
         >
           Votre électricien industriel &amp; tertiaire{' '}
-          <span className="bg-linear-to-r from-[#7ab0e8] to-[#5a90d0] bg-clip-text text-transparent">en Belgique.</span>
+          <span className="bg-linear-to-r from-[#7ab0e8] to-[#7ab0e8] bg-clip-text text-transparent">en Belgique.</span>
         </motion.h1>
 
         {/* Sous-titre */}
@@ -124,13 +124,13 @@ export function Hero() {
         >
           <Link
             href="/contact"
-            className="shimmer-btn relative w-64 overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
+            className="shimmer-btn relative w-64 overflow-hidden rounded-xl bg-[#2a6fd6] px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(42,111,214,0.4)]"
           >
             Nous contacter
           </Link>
           <Link
             href="/expertise"
-            className="w-64 whitespace-nowrap rounded-xl border border-white/40 bg-transparent px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-white/10 hover:shadow-[0_0_12px_rgba(90,144,208,0.15)]"
+            className="w-64 whitespace-nowrap rounded-xl border border-white/40 bg-transparent px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-white/10 hover:shadow-[0_0_12px_rgba(122,176,232,0.15)]"
           >
             Découvrir nos services
           </Link>
