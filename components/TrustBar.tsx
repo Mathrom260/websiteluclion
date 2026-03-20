@@ -28,8 +28,8 @@ export function TrustBar() {
             <motion.div
               key={label}
               variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+                hidden: { opacity: 0, y: 24 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
               }}
               className="flex flex-col items-center justify-center gap-2 rounded-xl border border-white/6 bg-[#0d1118] px-2 py-4 text-center transition-all duration-200 hover:border-[#1a5fb0]/40 hover:bg-[#111827] hover:shadow-[0_0_20px_rgba(26,95,176,0.15)]"
             >

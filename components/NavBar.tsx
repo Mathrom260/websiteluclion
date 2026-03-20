@@ -55,7 +55,7 @@ export function NavBar() {
           {pathname !== '/contact' && (
             <Button
               variant="secondary"
-              className="rounded-lg border-[rgba(255,255,255,0.06)] bg-[#1a5fb0] text-white shadow-[0_8px_30px_rgba(26,95,176,0.35)] hover:bg-[#1650a0]"
+              className="rounded-lg border-[rgba(255,255,255,0.06)] bg-[#1a5fb0] text-white shadow-[0_8px_30px_rgba(26,95,176,0.35)] transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
               size="sm"
               asChild
             >

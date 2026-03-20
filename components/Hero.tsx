@@ -1,65 +1,74 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { ShieldCheck } from 'lucide-react';
 
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export function Hero() {
+  const { scrollY } = useScroll();
+  const bgY = useTransform(scrollY, [0, 500], [0, -150]);
+
   return (
     <section
       id="hero"
       className="relative flex min-h-0 flex-col items-center justify-center overflow-hidden bg-[#090c10] px-6 pt-16 pb-12 text-center"
     >
-      {/* Grid technique */}
-      <div
+      {/* Background parallax */}
+      <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(90,144,208,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(90,144,208,0.04) 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
-          maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
-        }}
-      />
+        style={{ y: bgY }}
+        className="pointer-events-none absolute inset-0"
+      >
+        {/* Grid technique */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(90,144,208,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(90,144,208,0.04) 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+            maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%)',
+          }}
+        />
 
-      {/* Glow principal animé */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute"
-        style={{
-          width: '600px',
-          height: '300px',
-          borderRadius: '9999px',
-          background: 'radial-gradient(ellipse at center, rgba(26,95,176,0.18) 0%, transparent 70%)',
-          left: '50%',
-          top: '50%',
-          animation: 'glowPulse 6s ease-in-out infinite',
-        }}
-      />
+        {/* Glow principal animé */}
+        <div
+          className="absolute"
+          style={{
+            width: '600px',
+            height: '300px',
+            borderRadius: '9999px',
+            background: 'radial-gradient(ellipse at center, rgba(26,95,176,0.18) 0%, transparent 70%)',
+            left: '50%',
+            top: '50%',
+            animation: 'glowPulse 6s ease-in-out infinite',
+          }}
+        />
 
-      {/* Second glow décalé */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute"
-        style={{
-          width: '400px',
-          height: '200px',
-          borderRadius: '9999px',
-          background: 'radial-gradient(ellipse at center, rgba(90,144,208,0.08) 0%, transparent 70%)',
-          left: '50%',
-          top: '50%',
-          animation: 'glowDrift 8s ease-in-out infinite',
-        }}
-      />
+        {/* Second glow décalé */}
+        <div
+          className="absolute"
+          style={{
+            width: '400px',
+            height: '200px',
+            borderRadius: '9999px',
+            background: 'radial-gradient(ellipse at center, rgba(90,144,208,0.08) 0%, transparent 70%)',
+            left: '50%',
+            top: '50%',
+            animation: 'glowDrift 8s ease-in-out infinite',
+          }}
+        />
+      </motion.div>
 
+      {/* Contenu — fixe, pas de parallax */}
       <div className="relative z-10 mx-auto w-full max-w-4xl space-y-8 text-center">
         {/* Badge pill */}
         <motion.div
-          initial={{ opacity: 0, y: -12 }}
+          initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
+          transition={{ duration: 0.6, ease, delay: 0 }}
           className="inline-flex items-center gap-2 rounded-full border border-[#5a90d0]/30 bg-[#0d1a2e] px-4 py-1.5"
         >
           <ShieldCheck className="h-3.5 w-3.5 animate-pulse text-[#5a90d0] opacity-70" />
@@ -70,9 +79,9 @@ export function Hero() {
 
         {/* Headline */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+          transition={{ duration: 0.6, ease, delay: 0.15 }}
           className="text-4xl font-black leading-[1.1] tracking-tight text-[#eef2f8] md:text-5xl"
         >
           <span className="block">Installations électriques fiables</span>
@@ -86,9 +95,9 @@ export function Hero() {
 
         {/* Sous-titre */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+          transition={{ duration: 0.6, ease, delay: 0.25 }}
           className="mx-auto max-w-2xl text-base leading-relaxed text-[#7a8a9a] md:text-lg"
         >
           Nous accompagnons entreprises, promoteurs et gestionnaires de sites dans leurs projets électriques : installations, rénovations et mises en conformité, avec une exigence forte sur la sécurité, les délais et la fiabilité.
@@ -96,27 +105,34 @@ export function Hero() {
 
         {/* Boutons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
+          transition={{ duration: 0.6, ease, delay: 0.35 }}
           className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
         >
           <Link
             href="/contact"
-            className="shimmer-btn relative overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#1650a0]"
+            className="shimmer-btn relative overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
           >
             Demander un devis
           </Link>
           <Link
             href="/expertise"
-            className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-transparent px-8 py-3 text-sm text-[#c8d8f0] transition hover:bg-white/10"
+            className="rounded-xl border border-[rgba(255,255,255,0.12)] bg-transparent px-8 py-3 text-sm text-[#c8d8f0] transition-all duration-200 hover:scale-[1.02] hover:bg-white/10 hover:shadow-[0_0_12px_rgba(90,144,208,0.15)]"
           >
             Découvrir nos services
           </Link>
         </motion.div>
-        <p className="mt-3 text-center text-xs text-[#7a8a9a]">
+
+        {/* Micro-copy */}
+        <motion.p
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease, delay: 0.45 }}
+          className="mt-3 text-center text-xs text-[#7a8a9a]"
+        >
           Réponse rapide — analyse professionnelle de votre besoin
-        </p>
+        </motion.p>
       </div>
 
       {/* Keyframes */}

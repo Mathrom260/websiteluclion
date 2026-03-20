@@ -36,12 +36,17 @@ const steps = [
 
 const parentVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.15 } },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] as const } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
+};
+
+const lineVariants = {
+  hidden: { scaleX: 0 },
+  visible: { scaleX: 1, transition: { duration: 1, ease: [0.25, 0.1, 0.25, 1] as const, delay: 0.2 } },
 };
 
 export function Methode() {
@@ -53,16 +58,20 @@ export function Methode() {
             Comment nous intervenons
           </h2>
           <p className="mx-auto max-w-2xl text-base text-[#7a8a9a] sm:text-lg">
-            Une approche structurée pour chaque projet, quelle que soit sa
-            complexité.
+            Une approche structurée pour chaque projet, quelle que soit sa complexité.
           </p>
         </div>
 
         <div className="relative">
-          {/* Connecteur horizontal desktop */}
-          <div
+          {/* Ligne horizontale animée — desktop uniquement */}
+          <motion.div
             aria-hidden
-            className="absolute top-13 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] hidden border-t border-dashed border-[#1a5fb0]/20 lg:block"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={lineVariants}
+            style={{ originX: 0 }}
+            className="absolute top-8 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] hidden h-px border-t border-dashed border-[#1a5fb0]/30 lg:block"
           />
 
           <motion.div
@@ -76,12 +85,19 @@ export function Methode() {
               <motion.div
                 key={id}
                 variants={itemVariants}
-                className="relative flex flex-col rounded-xl border border-white/6 bg-[#090c10] p-7 transition-all duration-200 hover:border-[#1a5fb0]/30 hover:shadow-[0_0_20px_rgba(26,95,176,0.08)]"
+                className="relative flex flex-col rounded-xl border border-white/6 bg-[#090c10] p-7 transition-all duration-300 hover:border-[#1a5fb0]/40 hover:shadow-[0_0_20px_rgba(26,95,176,0.08)]"
               >
-                <p className="mb-2 text-4xl font-black leading-none text-[#5a90d0]/40">
+                {/* Ligne verticale mobile */}
+                <div
+                  aria-hidden
+                  className="absolute top-0 bottom-0 left-5 w-px bg-linear-to-b from-[#1a5fb0]/60 to-transparent lg:hidden"
+                />
+
+                <p className="font-mono text-5xl font-black leading-none text-[#5a90d0]/50">
                   {num}
                 </p>
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0d1a2e]">
+
+                <div className="mt-4 mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0d1a2e]">
                   <Icon className="h-5 w-5 text-[#5a90d0]" />
                 </div>
                 <p className="text-base font-semibold text-[#eef2f8]">{title}</p>

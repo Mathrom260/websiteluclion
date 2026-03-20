@@ -144,7 +144,7 @@ export function Contact() {
               {/* Bouton */}
               <Button
                 type="submit"
-                className="w-full rounded-lg bg-[#1a5fb0] py-3 font-semibold text-white transition-colors hover:bg-[#1a5fb0]/90"
+                className="w-full rounded-lg bg-[#1a5fb0] py-3 font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1a5fb0]/90 hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
               >
                 Envoyer ma demande
               </Button>
