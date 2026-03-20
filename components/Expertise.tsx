@@ -86,7 +86,7 @@ export function Expertise() {
   return (
     <section
       id="expertise"
-      className="bg-[#090c10] pt-16 pb-16 text-[#eef2f8]"
+      className="bg-[#0d1118] pt-16 pb-16 text-[#eef2f8]"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="space-y-6 text-center">

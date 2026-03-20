@@ -29,7 +29,8 @@ export function NavBar() {
             alt="Luc Lion SA"
             width={140}
             height={40}
-            style={{ filter: 'brightness(0) invert(1)', objectFit: 'contain' }}
+            unoptimized={true}
+            style={{ objectFit: 'contain', mixBlendMode: 'screen' }}
           />
         </Link>
 

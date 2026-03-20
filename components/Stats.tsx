@@ -78,7 +78,7 @@ export function Stats() {
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
         variants={parentVariants}
-        className="mx-auto grid max-w-4xl grid-cols-4 gap-6 px-6"
+        className="mx-auto grid max-w-6xl grid-cols-4 gap-6 px-8"
       >
         <StatItem prefix="+" end={30} duration={900} label="ans d'expérience" started={inView} />
         <StatItem prefix="+" end={500} duration={1200} label="projets réalisés" started={inView} />

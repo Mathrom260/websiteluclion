@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-[#090c10] px-6 pt-16 pb-12 text-center lg:px-12"
+      className="relative flex min-h-[85vh] w-full flex-col items-center justify-center overflow-hidden bg-[#0b0f1a] px-6 pt-16 pb-12 text-center lg:px-12"
     >
       {/* Vidéo de fond */}
       <video
@@ -119,17 +119,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease, delay: 0.35 }}
-          className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+          className="flex flex-row items-center justify-center gap-4"
         >
           <Link
             href="/contact"
-            className="shimmer-btn relative min-w-50 overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
+            className="shimmer-btn relative w-64 overflow-hidden rounded-xl bg-[#1a5fb0] px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#1650a0] hover:shadow-[0_0_20px_rgba(26,95,176,0.4)]"
           >
             Nous contacter
           </Link>
           <Link
             href="/expertise"
-            className="min-w-50 rounded-xl border border-white/40 bg-transparent px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-white/10 hover:shadow-[0_0_12px_rgba(90,144,208,0.15)]"
+            className="w-64 whitespace-nowrap rounded-xl border border-white/40 bg-transparent px-8 py-3 text-center text-base font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-white/10 hover:shadow-[0_0_12px_rgba(90,144,208,0.15)]"
           >
             Découvrir nos services
           </Link>

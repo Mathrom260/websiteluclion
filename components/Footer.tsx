@@ -19,7 +19,8 @@ export function Footer() {
               alt="Luc Lion SA"
               width={100}
               height={32}
-              style={{ filter: 'brightness(0) invert(1)', objectFit: 'contain' }}
+              unoptimized={true}
+              style={{ objectFit: 'contain' }}
             />
             <p className="text-sm text-[#7a8a9a]">
               Électricité industrielle &amp; tertiaire en Belgique

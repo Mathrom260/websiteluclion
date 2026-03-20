@@ -51,7 +51,7 @@ const lineVariants = {
 
 export function Methode() {
   return (
-    <section className="bg-[#0d1118] py-16 text-[#eef2f8]">
+    <section className="bg-[#090c10] py-16 text-[#eef2f8]">
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="mb-12 space-y-4 text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">

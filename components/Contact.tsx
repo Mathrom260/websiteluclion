@@ -48,7 +48,7 @@ export function Contact() {
                 </span>
               </h2>
               <p className="mt-3 text-base leading-7 text-[#7a8a9a]">
-                Décrivez-nous votre projet. Nous revenons vers vous sous 48h.
+                Décrivez-nous votre projet.
               </p>
             </div>
 
@@ -68,12 +68,12 @@ export function Contact() {
 
             <p className="mt-4 flex items-center gap-2 text-xs text-[#7a8a9a]">
               <ShieldCheck className="h-3 w-3 text-[#5a90d0]" />
-              Réponse garantie sous 48h · Aucun engagement
+              Réponse rapide · Sans engagement
             </p>
           </div>
 
           {/* Colonne droite — formulaire */}
-          <div className="rounded-2xl border border-[#1a5fb0]/20 bg-[#111827] p-8 lg:mt-[160px]">
+          <div className="rounded-2xl border border-[#1a5fb0]/20 bg-[#111827] p-8 lg:mt-36.25">
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               {/* Nom + Société */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
