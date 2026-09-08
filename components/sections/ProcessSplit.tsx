@@ -15,11 +15,20 @@ export function ProcessSplit() {
             alt={processImage.alt}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover object-[30%_50%]"
           />
         ) : (
           <div aria-hidden className="absolute inset-0 bg-ink-soft" />
         )}
+        {/* Fondu vers le bleu nuit du panneau de droite (et vers le bas sur mobile). */}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-linear-to-l from-ink-2 from-0% via-ink-2/40 via-18% to-transparent to-45% max-lg:hidden"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-linear-to-b from-transparent from-55% to-ink-2 lg:hidden"
+        />
 
         <Reveal className="absolute bottom-8 left-6 flex items-stretch md:bottom-10 md:left-10">
           <span className="flex size-[3.25rem] shrink-0 items-center justify-center bg-accent">

@@ -82,8 +82,12 @@ export const sectors: Sector[] = [
   { label: 'Logistique', href: '/realisations' },
 ];
 
-/** Photo de la section split « Un accompagnement à chaque étape » — à fournir. */
-export const processImage: { src: string; alt: string } | undefined = undefined;
+/** Photo de la section split « Un accompagnement à chaque étape ». Source 3:1, recadrée
+ *  sur le technicien (object-position 30 %) et fondue dans le bleu nuit sur son bord droit. */
+export const processImage: { src: string; alt: string } | undefined = {
+  src: '/images/accompagnement-technicien.webp',
+  alt: 'Technicien Luc Lion intervenant sur un tableau électrique',
+};
 
 export type Certification = {
   icon: LucideIcon;
