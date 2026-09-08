@@ -225,6 +225,155 @@ export const projects: Project[] = [
   },
 ];
 
+/* ------------------------------------------------------------------ */
+/* À propos — contenu repris de l'ancien site luclion.be (sept. 2026). */
+/* ------------------------------------------------------------------ */
+
+export const aboutFacts = [
+  { value: '1972', label: 'début de l’activité' },
+  { value: '1986', label: 'création de la SA et du siège' },
+  { value: '2', label: 'générations à la direction' },
+  { value: 'Classe 4', label: 'agréation marchés publics' },
+];
+
+export type Milestone = { year: string; title: string; text: string };
+
+export const milestones: Milestone[] = [
+  {
+    year: '1972',
+    title: 'Les débuts',
+    text: 'Luc Lion commence ses travaux d’électricité en activité complémentaire.',
+  },
+  {
+    year: '1977',
+    title: 'Première société',
+    text: 'L’activité devient une société en personne physique, avec une poignée de techniciens.',
+  },
+  {
+    year: '1986',
+    title: 'Naissance de la SA',
+    text: 'Création de Luc Lion S.A. et construction du hall industriel et des bureaux à Jemeppe-sur-Sambre.',
+  },
+  {
+    year: '1988',
+    title: 'Essor',
+    text: 'De 1988 à 1990, l’activité s’accélère et les équipes s’agrandissent fortement.',
+  },
+  {
+    year: '1991',
+    title: 'Deuxième génération',
+    text: 'Michaël Lion rejoint son père. Ensemble, ils développent les activités et ouvrent de nouveaux secteurs.',
+  },
+  {
+    year: 'Aujourd’hui',
+    title: 'Industrie, tertiaire et au-delà',
+    text: 'Aux clients industriels se sont ajoutés banques, assurances, services publics, distribution et agro-alimentaire.',
+  },
+];
+
+export const values: { title: string; text: string }[] = [
+  {
+    title: 'Un ensemble de services complet',
+    text: 'Permettre à nos clients de tirer le maximum de leur outil de travail, de l’étude à la maintenance.',
+  },
+  {
+    title: 'Confiance et transparence',
+    text: 'Honnêteté, respect du client et travail de qualité, en totale adéquation avec les règles de l’art.',
+  },
+  {
+    title: 'Le savoir-faire qu’exige chaque projet',
+    text: 'Des solutions adaptées aux normes techniques et de qualité les plus modernes.',
+  },
+];
+
+export type Approval = { classe: string; category: string; scope: string };
+
+/** Agréation « Entrepreneur de travaux pour marchés publics ». */
+export const approvals: Approval[] = [
+  {
+    classe: 'Classe 4',
+    category: 'P1',
+    scope:
+      'Installations électriques des bâtiments, y compris groupes électrogènes, détection incendie et vol, télétransmissions et téléphonie mixte.',
+  },
+  {
+    classe: 'Classe 2',
+    category: 'P2',
+    scope:
+      'Installations électriques et électromécaniques d’ouvrages d’art ou industriels, installations électriques extérieures.',
+  },
+  {
+    classe: 'Classe 2',
+    category: 'P3',
+    scope: 'Installations électriques de lignes aériennes de transport électrique.',
+  },
+  {
+    classe: 'Classe 2',
+    category: 'S1',
+    scope: 'Équipements de téléphonie et de télégraphie.',
+  },
+];
+
+export type CertificationGroup = { title: string; items: string[] };
+
+export const certificationGroups: CertificationGroup[] = [
+  {
+    title: 'Câblage réseaux structuré',
+    items: [
+      'Nexans Cabling System — niveau Expert',
+      'ITT Canon — Approved Installer, Certified Link 5e',
+      'R&M — R&M freenet',
+    ],
+  },
+  {
+    title: 'Moyenne tension',
+    items: [
+      'Connecteurs séparables Connex de Pfisterer sur câble HT à isolation PRC',
+      'Terminales et jonctions Raychem sur câbles HT à isolation PRC et papier plomb',
+    ],
+  },
+  {
+    title: 'Traçage électrique',
+    items: ['Rubans chauffants autorégulants Tyco Thermal Controls'],
+  },
+  {
+    title: 'Sécurité',
+    items: ['L’ensemble du personnel est certifié VCA'],
+  },
+];
+
+export const caoSoftware = ['Autocad', 'See Electrical Expert', 'Microstation', 'TR-CIEL'];
+
+export type SectorFamily = { title: string; sectors: string[] };
+
+/** Les 15 secteurs de l'ancien site, regroupés pour la lecture. */
+export const sectorFamilies: SectorFamily[] = [
+  {
+    title: 'Industrie',
+    sectors: [
+      'Industrie pharmaceutique',
+      'Industrie chimique',
+      'Industrie verrière',
+      'Sidérurgie',
+      'Process',
+      'Production d’électricité',
+      'Distribution et traitement des eaux',
+    ],
+  },
+  {
+    title: 'Tertiaire et services',
+    sectors: ['Banques', 'Assurances', 'Informatique', 'Service public', 'Armée'],
+  },
+  {
+    title: 'Distribution et alimentaire',
+    sectors: ['Grande distribution', 'Commerce de détail', 'Alimentaire'],
+  },
+  {
+    title: 'Sécurité',
+    sectors: ['Extinction incendie'],
+  },
+];
+
 /** Visuel du hero de la page Services (généré, gpt-image-2, sept. 2026). */
 export const servicesHeroImage = {
   src: '/images/services-hero.webp',
