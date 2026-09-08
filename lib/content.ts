@@ -83,7 +83,7 @@ export const sectors: Sector[] = [
 ];
 
 /** Photo de la section split « Un accompagnement à chaque étape ». Source 3:1, recadrée
- *  sur le technicien (object-position 30 %) et fondue dans le bleu nuit sur son bord droit. */
+ *  sur le technicien (object-position 26 %) et fondue dans le bleu nuit sur son bord droit. */
 export const processImage: { src: string; alt: string } | undefined = {
   src: '/images/accompagnement-technicien.webp',
   alt: 'Technicien Luc Lion intervenant sur un tableau électrique',

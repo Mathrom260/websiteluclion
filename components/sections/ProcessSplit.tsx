@@ -15,7 +15,7 @@ export function ProcessSplit() {
             alt={processImage.alt}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-[30%_50%]"
+            className="object-cover object-[26%_50%]"
           />
         ) : (
           <div aria-hidden className="absolute inset-0 bg-ink-soft" />
