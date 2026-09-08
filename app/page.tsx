@@ -5,6 +5,7 @@ import { ProcessSplit } from '@/components/sections/ProcessSplit';
 import { Projects } from '@/components/sections/Projects';
 import { Compliance } from '@/components/sections/Compliance';
 import { Clients } from '@/components/sections/Clients';
+import { CtaFinal } from '@/components/sections/CtaFinal';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Projects />
         <Compliance />
         <Clients />
+        <CtaFinal />
       </main>
     </>
   );

@@ -110,6 +110,9 @@ export const certifications: Certification[] = [
   },
 ];
 
+/** Photo du CTA final (bâtiment Luc Lion à la tombée du jour) — à fournir. */
+export const ctaImage: { src: string; alt: string } | undefined = undefined;
+
 /** Photo de la section « Sécurité et conformité » — à fournir. */
 export const complianceImage: { src: string; alt: string } | undefined = undefined;
 
