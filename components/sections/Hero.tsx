@@ -84,10 +84,10 @@ export function Hero() {
 
           <motion.p
             variants={rise}
-            className="mt-7 max-w-[40rem] text-lg leading-relaxed text-paper/90 md:text-xl"
+            className="mt-7 max-w-[46rem] text-lg leading-relaxed text-paper/90 md:text-xl"
           >
-            Luc Lion SA accompagne les entreprises dans leurs installations électriques, de la
-            conception à la réalisation et à la maintenance.
+            Luc Lion SA accompagne les entreprises dans leurs installations électriques :
+            réalisation, rénovation et maintenance, de l&apos;étude à la mise en service.
           </motion.p>
 
           <motion.div variants={rise} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">

@@ -5,6 +5,11 @@
 Site vitrine B2B de **Luc Lion SA**, électricien industriel et tertiaire en Belgique.
 Objectif du site : générer des demandes de devis qualifiées (formulaire, téléphone).
 
+Baseline de l'entreprise : « Votre partenaire pour la réalisation, la rénovation et
+l'entretien de vos installations techniques, de l'étude à la mise en service. »
+Périmètre confirmé par Mathieu : **électricité uniquement** — le site dit « installations
+électriques », plus précis que la baseline. Rénovation et mise en service doivent apparaître.
+
 ## Faits vérifiés (ne rien inventer au-delà)
 
 - Téléphone : 071/78 80 16 · Email : info@luclion.be

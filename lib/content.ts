@@ -64,6 +64,10 @@ export const processSteps: ProcessStep[] = [
     description: 'Des installations de qualité, dans le respect des délais.',
   },
   {
+    title: 'Mise en service',
+    description: 'Vérification complète et remise d’une installation prête à l’emploi.',
+  },
+  {
     title: 'Maintenance',
     description: 'Un suivi fiable pour assurer la continuité de votre activité.',
   },
