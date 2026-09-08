@@ -52,7 +52,7 @@ export function Hero() {
       {/* Voile : opaque à gauche pour le texte, presque nul à droite pour la photo. */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-linear-to-r from-ink/95 from-0% via-ink/70 via-35% to-ink/0 to-80%"
+        className="absolute inset-0 bg-linear-to-r from-ink from-0% via-ink/85 via-40% to-ink/0 to-85%"
       />
       <div
         aria-hidden

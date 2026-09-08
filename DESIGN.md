@@ -48,7 +48,9 @@ se déclare en rem, jamais en px** (`text-[1.0625rem]` et non `text-[17px]`), po
 ## Photo
 
 `public/images/hero-luc-lion.webp` (1780×883) en `object-cover object-[72%_50%]`.
-Voile : `bg-linear-to-r from-ink/85 via-ink/45 to-ink/5` + dégradé haut `from-ink/60` pour la nav.
+Voile : `bg-linear-to-r from-ink from-0% via-ink/85 via-40% to-ink/0 to-85%` (tiers gauche
+opaque pour le texte, fenêtre lumineuse préservée à droite) + dégradé haut `from-ink/60`
+pour la nav.
 
 ## Mouvement
 
