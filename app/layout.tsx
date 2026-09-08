@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-manrope',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Luc Lion SA - Électricité industrielle & tertiaire',
+  title: {
+    default: 'Luc Lion SA — Électricité industrielle & tertiaire en Belgique',
+    template: '%s · Luc Lion SA',
+  },
   description:
-    "Luc Lion SA offre des solutions d'électricité industrielle et tertiaire en Belgique, avec interlocteur unique et service B2B réactif.",
+    'Luc Lion SA accompagne les entreprises dans leurs installations électriques industrielles et tertiaires en Belgique, de la conception à la maintenance. Certifié RGIE.',
 };
 
 export default function RootLayout({
@@ -20,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="bg-[#1a2035] text-[#eef2f8]">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+    <html lang="fr" className={manrope.variable}>
+      <body>{children}</body>
     </html>
   );
 }

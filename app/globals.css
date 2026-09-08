@@ -4,40 +4,42 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ------------------------------------------------------------------ */
+/* Tokens de marque — source unique. Aucun hex ailleurs que ce fichier. */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-ink: #0b1420; /* bleu nuit : fond, texte sur pill blanc          */
+  --color-ink-soft: #101b2a; /* surfaces légèrement relevées (cartes, menus) */
+  --color-paper: #f4f7fb; /* blanc cassé : texte principal                  */
+  --color-accent: #a5ccf5; /* bleu clair : 3ᵉ ligne du H1, icônes           */
+  --color-accent-deep: #8fbbeb; /* bleu clair saturé : eyebrow, liens actifs  */
+  --color-line: rgb(255 255 255 / 0.25); /* séparateurs, bordure nav        */
+
+  --font-sans:
+    var(--font-manrope), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Tokens sémantiques shadcn, remappés sur la palette de marque. */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -48,96 +50,57 @@
 }
 
 :root {
-  --background: #1a2035;
-  --foreground: #eef2f8;
-  --card: #243050;
-  --card-foreground: #eef2f8;
-  --popover: #243050;
-  --popover-foreground: #eef2f8;
-  --primary: #2a6fd6;
-  --primary-foreground: #ffffff;
-  --secondary: #7ab0e8;
-  --secondary-foreground: #eef2f8;
-  --muted: #243050;
-  --muted-foreground: #8a9ab8;
-  --accent: #2a6fd6;
-  --accent-foreground: #ffffff;
-  --destructive: #d53030;
-  --border: rgba(255, 255, 255, 0.06);
-  --input: #243050;
-  --ring: #2a6fd6;
-  --chart-1: #2a6fd6;
-  --chart-2: #7ab0e8;
-  --chart-3: #8a9ab8;
-  --chart-4: #eef2f8;
-  --chart-5: #c8d8f0;
-  --radius: 0.625rem;
-  --sidebar: #243050;
-  --sidebar-foreground: #eef2f8;
-  --sidebar-primary: #2a6fd6;
-  --sidebar-primary-foreground: #eef2f8;
-  --sidebar-accent: #7ab0e8;
-  --sidebar-accent-foreground: #eef2f8;
-  --sidebar-border: rgba(255, 255, 255, 0.06);
-  --sidebar-ring: #2a6fd6;
-}
-
-.dark {
-  --background: #1a2035;
-  --foreground: #eef2f8;
-  --card: #243050;
-  --card-foreground: #eef2f8;
-  --popover: #243050;
-  --popover-foreground: #eef2f8;
-  --primary: #2a6fd6;
-  --primary-foreground: #ffffff;
-  --secondary: #7ab0e8;
-  --secondary-foreground: #eef2f8;
-  --muted: #243050;
-  --muted-foreground: #8a9ab8;
-  --accent: #2a6fd6;
-  --accent-foreground: #ffffff;
-  --destructive: #d53030;
-  --border: rgba(255, 255, 255, 0.06);
-  --input: #243050;
-  --ring: #2a6fd6;
-  --chart-1: #2a6fd6;
-  --chart-2: #7ab0e8;
-  --chart-3: #8a9ab8;
-  --chart-4: #eef2f8;
-  --chart-5: #c8d8f0;
-  --sidebar: #243050;
-  --sidebar-foreground: #eef2f8;
-  --sidebar-primary: #2a6fd6;
-  --sidebar-primary-foreground: #eef2f8;
-  --sidebar-accent: #7ab0e8;
-  --sidebar-accent-foreground: #eef2f8;
-  --sidebar-border: rgba(255, 255, 255, 0.06);
-  --sidebar-ring: #2a6fd6;
+  --background: var(--color-ink);
+  --foreground: var(--color-paper);
+  --card: var(--color-ink-soft);
+  --card-foreground: var(--color-paper);
+  --popover: var(--color-ink-soft);
+  --popover-foreground: var(--color-paper);
+  --primary: var(--color-paper);
+  --primary-foreground: var(--color-ink);
+  --secondary: var(--color-accent);
+  --secondary-foreground: var(--color-ink);
+  --muted: var(--color-ink-soft);
+  --muted-foreground: rgb(244 247 251 / 0.7);
+  --destructive: #e5484d;
+  --border: rgb(255 255 255 / 0.12);
+  --input: rgb(255 255 255 / 0.12);
+  --ring: var(--color-accent);
+  --radius: 0.75rem;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   html {
-    @apply font-sans;
-    background: #0a0a0a;
-    color: #f0f0f0;
+    @apply scroll-smooth bg-ink font-sans text-paper;
+    scrollbar-color: rgb(255 255 255 / 0.25) var(--color-ink);
   }
+
   body {
-    background: #0a0a0a;
-    color: #f0f0f0;
-    min-height: 100vh;
-    font-family:
-      var(--font-inter),
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      Segoe UI,
-      Roboto,
-      Helvetica,
-      Arial,
-      sans-serif;
+    @apply min-h-screen bg-ink text-paper antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
