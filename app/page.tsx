@@ -3,6 +3,8 @@ import { Hero } from '@/components/sections/Hero';
 import { Approach } from '@/components/sections/Approach';
 import { ProcessSplit } from '@/components/sections/ProcessSplit';
 import { Projects } from '@/components/sections/Projects';
+import { Compliance } from '@/components/sections/Compliance';
+import { Clients } from '@/components/sections/Clients';
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <Approach />
         <ProcessSplit />
         <Projects />
+        <Compliance />
+        <Clients />
       </main>
     </>
   );

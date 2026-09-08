@@ -1,6 +1,8 @@
 import {
   ChartNoAxesColumnIncreasing,
   Clock,
+  FileText,
+  ShieldCheck,
   Users,
   Zap,
   type LucideIcon,
@@ -82,3 +84,47 @@ export const sectors: Sector[] = [
 
 /** Photo de la section split « Un accompagnement à chaque étape » — à fournir. */
 export const processImage: { src: string; alt: string } | undefined = undefined;
+
+export type Certification = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  /** Ligne factuelle sous la description (date de certification…). */
+  note?: string;
+};
+
+/** Textes repris de la maquette « Sécurité et conformité » fournie par Mathieu. */
+export const certifications: Certification[] = [
+  {
+    icon: FileText,
+    title: 'RGIE',
+    description:
+      "Conseil et accompagnement concernant la réglementation applicable aux installations électriques, notamment l'article 104 relatif aux mesures préventives contre l'incendie.",
+  },
+  {
+    icon: ShieldCheck,
+    title: 'VCA*',
+    description:
+      'Une démarche structurée autour de la sécurité, de la qualité et du bien-être sur chantier.',
+    note: 'Certifié depuis le 28 novembre 2011.',
+  },
+];
+
+/** Photo de la section « Sécurité et conformité » — à fournir. */
+export const complianceImage: { src: string; alt: string } | undefined = undefined;
+
+export type Client = {
+  name: string;
+  /** Logo transparent (SVG ou PNG) — `undefined` = le nom s'affiche en texte. */
+  logo?: { src: string; width: number; height: number };
+};
+
+/** Ordre de la maquette. Logos à fournir en SVG / PNG transparent. */
+export const clients: Client[] = [
+  { name: 'BNP Paribas' },
+  { name: "Inn'ovin" },
+  { name: 'Solvay' },
+  { name: 'Tractebel Engie' },
+  { name: 'Spie' },
+  { name: 'Besix' },
+];

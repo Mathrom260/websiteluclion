@@ -114,3 +114,24 @@
     text-wrap: pretty;
   }
 }
+
+/* Défilement lent des logos clients : la liste est dupliquée, on translate de moitié. */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 45s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+}
