@@ -143,6 +143,88 @@ export const services: Service[] = [
   },
 ];
 
+export const projectSectors = ['Industrie', 'Tertiaire', 'Logistique', 'Mise en conformité'] as const;
+export type ProjectSector = (typeof projectSectors)[number];
+
+export type Project = {
+  id: string;
+  sector: ProjectSector;
+  /** Nature de la prestation — pas un nom de chantier. */
+  title: string;
+  /** Prestations réalisées, parmi les 6 services. */
+  scope: string[];
+  location: string;
+  year: string;
+  /** `undefined` = placeholder dessiné, en attendant la vraie photo. */
+  image?: { src: string; alt: string };
+  /** Mis en avant en tête de page (un seul). */
+  featured?: boolean;
+};
+
+/**
+ * TEMPLATE À COMPLÉTER — aucun chantier réel n'est documenté pour l'instant.
+ * Chaque entrée décrit un type de prestation, avec lieu et année à renseigner.
+ */
+export const projects: Project[] = [
+  {
+    id: 'p1',
+    sector: 'Industrie',
+    title: 'Installation électrique complète d’un hall de production',
+    scope: ['Installations électriques', 'Tableaux électriques', 'Câblage & infrastructure'],
+    location: 'Lieu à préciser',
+    year: 'Année',
+    featured: true,
+  },
+  {
+    id: 'p2',
+    sector: 'Tertiaire',
+    title: 'Rénovation électrique d’un immeuble de bureaux',
+    scope: ['Électricité tertiaire', 'Mise en conformité RGIE'],
+    location: 'Lieu à préciser',
+    year: 'Année',
+  },
+  {
+    id: 'p3',
+    sector: 'Logistique',
+    title: 'Infrastructure et éclairage d’un entrepôt',
+    scope: ['Câblage & infrastructure', 'Installations électriques'],
+    location: 'Lieu à préciser',
+    year: 'Année',
+  },
+  {
+    id: 'p4',
+    sector: 'Mise en conformité',
+    title: 'Audit et remise aux normes RGIE d’un site existant',
+    scope: ['Mise en conformité RGIE'],
+    location: 'Lieu à préciser',
+    year: 'Année',
+  },
+  {
+    id: 'p5',
+    sector: 'Industrie',
+    title: 'Conception et câblage de tableaux basse tension',
+    scope: ['Tableaux électriques'],
+    location: 'Lieu à préciser',
+    year: 'Année',
+  },
+  {
+    id: 'p6',
+    sector: 'Tertiaire',
+    title: 'Électricité d’un bâtiment public',
+    scope: ['Électricité tertiaire', 'Câblage & infrastructure'],
+    location: 'Lieu à préciser',
+    year: 'Année',
+  },
+  {
+    id: 'p7',
+    sector: 'Logistique',
+    title: 'Contrat de maintenance d’une plateforme logistique',
+    scope: ['Maintenance & dépannage'],
+    location: 'Lieu à préciser',
+    year: 'Année',
+  },
+];
+
 /** Visuel du hero de la page Services (généré, gpt-image-2, sept. 2026). */
 export const servicesHeroImage = {
   src: '/images/services-hero.webp',
