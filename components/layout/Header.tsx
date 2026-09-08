@@ -26,7 +26,7 @@ const navItems = [
 ];
 
 const linkClass =
-  'text-[1.0625rem] font-normal text-paper/90 transition-colors duration-200 hover:text-paper aria-[current=page]:text-paper';
+  'relative text-[1.0625rem] font-normal text-paper/90 transition-colors duration-200 hover:text-paper aria-[current=page]:text-paper aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-0.5 aria-[current=page]:after:h-px aria-[current=page]:after:bg-accent';
 
 export function Header() {
   const pathname = usePathname();

@@ -19,6 +19,25 @@ export const contact = {
     'https://www.google.com/maps/search/?api=1&query=Chaussée+de+Charleroi+81,+5190+Jemeppe-sur-Sambre,+Belgique',
 };
 
+/** Les 6 domaines d'intervention (ancres de la page Services, options du formulaire). */
+export const services = [
+  { slug: 'installations-electriques', label: 'Installations électriques' },
+  { slug: 'electricite-tertiaire', label: 'Électricité tertiaire' },
+  { slug: 'tableaux-electriques', label: 'Tableaux électriques' },
+  { slug: 'mise-conformite', label: 'Mise en conformité RGIE' },
+  { slug: 'cablage-infrastructure', label: 'Câblage & infrastructure' },
+  { slug: 'maintenance-depannage', label: 'Maintenance & dépannage' },
+] as const;
+
+export const navigation = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Services', href: '/expertise' },
+  { label: 'Réalisations', href: '/realisations' },
+  { label: 'À propos', href: '/a-propos' },
+  { label: 'Carrières', href: '/carrieres' },
+  { label: 'Contact', href: '/contact' },
+] as const;
+
 export type ApproachItem = {
   icon: LucideIcon;
   title: string;
