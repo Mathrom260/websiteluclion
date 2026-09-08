@@ -15,6 +15,18 @@ npm install
 npm run dev
 ```
 
+## Déploiement
+
+Hébergé sur Vercel, projet **luclion** → https://luclion.vercel.app
+
+Le dépôt GitHub est relié : un push sur `main` déclenche un déploiement de production,
+toute autre branche produit une URL de prévisualisation. `.vercelignore` exclut les
+maquettes et les PNG sources (seuls les WebP servent au site).
+
+Déploiement manuel si besoin : `vercel --prod`.
+
+Le domaine `luclion.be` n'est pas encore branché — l'ancien site reste en place.
+
 ## Formulaire de contact
 
 L'envoi passe par [Resend](https://resend.com) (appel HTTP direct, aucune dépendance).
