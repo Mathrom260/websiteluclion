@@ -77,6 +77,10 @@
   html {
     @apply scroll-smooth bg-ink font-sans text-paper;
     scrollbar-color: rgb(255 255 255 / 0.25) var(--color-ink);
+    /* Échelle fluide au-delà de 1787px (largeur de la maquette) : 16px jusqu'à 1787,
+       puis proportionnel au viewport, plafonné à 24px (~2680px). Tout ce qui est en rem
+       — conteneur, espacements, boutons, typo — suit, dans les proportions de la maquette. */
+    font-size: clamp(1rem, 0.8953vw, 1.5rem);
   }
 
   body {

@@ -64,18 +64,18 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           variants={stagger}
-          className="max-w-[820px]"
+          className="max-w-[51.25rem]"
         >
           <motion.p
             variants={rise}
-            className="text-[13px] font-normal tracking-[0.22em] text-accent-deep uppercase sm:tracking-[0.3em]"
+            className="text-[0.8125rem] font-normal tracking-[0.22em] text-accent-deep uppercase sm:tracking-[0.3em]"
           >
             Votre partenaire électrique B2B
           </motion.p>
 
           <motion.h1
             variants={rise}
-            className="mt-6 text-[clamp(2.6rem,4.2vw,4.25rem)] leading-[1.02] font-light tracking-[-0.02em] text-paper sm:leading-[0.97]"
+            className="mt-6 text-[clamp(2.6rem,3.8vw,4.25rem)] leading-[1.02] font-light tracking-[-0.02em] text-paper sm:leading-[0.97]"
           >
             <span className="sm:block">Des installations </span>
             <span className="sm:block">électriques qui font </span>
@@ -84,7 +84,7 @@ export function Hero() {
 
           <motion.p
             variants={rise}
-            className="mt-7 max-w-[640px] text-lg leading-relaxed text-paper/90 md:text-xl"
+            className="mt-7 max-w-[40rem] text-lg leading-relaxed text-paper/90 md:text-xl"
           >
             Luc Lion accompagne les entreprises dans leurs installations électriques, de la
             conception à la réalisation et à la maintenance.
@@ -93,7 +93,7 @@ export function Hero() {
           <motion.div variants={rise} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
             <Link
               href="/contact"
-              className="group inline-flex h-[58px] items-center gap-3 rounded-full bg-paper px-8 text-[17px] font-medium text-ink transition-colors duration-200 hover:bg-accent"
+              className="group inline-flex h-[3.625rem] items-center gap-3 rounded-full bg-paper px-8 text-[1.0625rem] font-medium text-ink transition-colors duration-200 hover:bg-accent"
             >
               Parler de votre projet
               <ArrowRight
@@ -104,7 +104,7 @@ export function Hero() {
             </Link>
             <Link
               href="/realisations"
-              className="group inline-flex items-center gap-3 py-2 text-[17px] font-medium text-paper transition-colors duration-200 hover:text-accent"
+              className="group inline-flex items-center gap-3 py-2 text-[1.0625rem] font-medium text-paper transition-colors duration-200 hover:text-accent"
             >
               Découvrir nos réalisations
               <ArrowRight
@@ -130,8 +130,8 @@ export function Hero() {
             >
               <Icon className="mt-0.5 size-9 shrink-0 text-accent" strokeWidth={1.5} aria-hidden />
               <div>
-                <p className="text-[17px] font-medium text-paper">{title}</p>
-                <p className="mt-1 max-w-[18ch] text-[13px] leading-relaxed text-paper/70">{text}</p>
+                <p className="text-[1.0625rem] font-medium text-paper">{title}</p>
+                <p className="mt-1 max-w-[18ch] text-[0.8125rem] leading-relaxed text-paper/70">{text}</p>
               </div>
             </motion.li>
           ))}

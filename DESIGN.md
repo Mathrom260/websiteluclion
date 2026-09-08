@@ -28,9 +28,16 @@ Texte secondaire : `paper/90` (paragraphes), `paper/70` (légendes), jamais un g
 
 Graisses chargées : 300, 400, 500, 600. Pas de gras 700+.
 
+## Échelle fluide
+
+`html { font-size: clamp(1rem, 0.8953vw, 1.5rem) }` — 16px jusqu'à 1787px (largeur de la
+maquette), puis proportionnel au viewport, plafonné à 24px vers 2680px. Conséquence : **tout
+se déclare en rem, jamais en px** (`text-[1.0625rem]` et non `text-[17px]`), pour que grand
+écran et maquette gardent les mêmes proportions. Les breakpoints Tailwind ne bougent pas.
+
 ## Composants de base
 
-- **Container** : `max-w-[1490px] px-6 md:px-10` — 147px de marge à 1787px.
+- **Container** : `max-w-[93.125rem] px-6 md:px-10` — 147px de marge à 1787px, échelle au-delà.
 - **Header** : absolu sur le hero, transparent, hauteur 88px, `border-b border-line` limitée
   au conteneur. Pill « Demander un devis » : bordure `paper` 1px, fond transparent, hover inversé.
 - **Pill primaire** : `h-[58px] rounded-full bg-paper text-ink font-medium px-8` + flèche

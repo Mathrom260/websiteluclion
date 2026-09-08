@@ -26,7 +26,7 @@ const navItems = [
 ];
 
 const linkClass =
-  'text-[17px] font-normal text-paper/90 transition-colors duration-200 hover:text-paper aria-[current=page]:text-paper';
+  'text-[1.0625rem] font-normal text-paper/90 transition-colors duration-200 hover:text-paper aria-[current=page]:text-paper';
 
 export function Header() {
   const pathname = usePathname();
@@ -47,7 +47,7 @@ export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 text-paper">
       <Container>
-        <div className="flex h-[88px] items-center justify-between border-b border-line">
+        <div className="flex h-22 items-center justify-between border-b border-line">
           <Link href="/" className="flex shrink-0 items-center" aria-label="Luc Lion SA — accueil">
             <Image
               src="/images/logo-luclion-white.png"
@@ -55,7 +55,7 @@ export function Header() {
               width={1087}
               height={388}
               priority
-              className="h-12 w-auto md:h-[60px]"
+              className="h-12 w-auto md:h-15"
             />
           </Link>
 
@@ -84,7 +84,7 @@ export function Header() {
                         <li key={child.href}>
                           <Link
                             href={child.href}
-                            className="block rounded-xl px-4 py-2.5 text-[15px] text-paper/85 transition-colors hover:bg-paper/8 hover:text-paper"
+                            className="block rounded-xl px-4 py-2.5 text-[0.9375rem] text-paper/85 transition-colors hover:bg-paper/8 hover:text-paper"
                           >
                             {child.label}
                           </Link>
@@ -110,7 +110,7 @@ export function Header() {
           <div className="hidden items-center gap-10 lg:flex">
             {/* Sélecteur de langue décoratif : FR seul pour l'instant. */}
             <span
-              className="inline-flex items-center gap-1.5 text-[17px] text-paper/90"
+              className="inline-flex items-center gap-1.5 text-[1.0625rem] text-paper/90"
               aria-label="Langue : français"
             >
               FR
@@ -118,7 +118,7 @@ export function Header() {
             </span>
             <Link
               href="/contact"
-              className="inline-flex h-[55px] items-center rounded-full border border-paper px-8 text-[17px] font-normal text-paper transition-colors duration-200 hover:bg-paper hover:text-ink"
+              className="inline-flex h-[3.4375rem] items-center rounded-full border border-paper px-8 text-[1.0625rem] font-normal text-paper transition-colors duration-200 hover:bg-paper hover:text-ink"
             >
               Demander un devis
             </Link>
@@ -144,7 +144,7 @@ export function Header() {
         hidden={!open}
         className="fixed inset-0 z-40 flex flex-col bg-ink/95 backdrop-blur-md lg:hidden"
       >
-        <Container className="flex flex-1 flex-col pt-[88px]">
+        <Container className="flex flex-1 flex-col pt-22">
           <nav aria-label="Navigation mobile" className="flex-1 pt-6">
             <ul className="divide-y divide-line">
               {navItems.map((item) => (
@@ -164,7 +164,7 @@ export function Header() {
                           <Link
                             href={child.href}
                             onClick={close}
-                            className="block py-1.5 text-[15px] text-paper/70 hover:text-paper"
+                            className="block py-1.5 text-[0.9375rem] text-paper/70 hover:text-paper"
                           >
                             {child.label}
                           </Link>
@@ -180,7 +180,7 @@ export function Header() {
             <Link
               href="/contact"
               onClick={close}
-              className="inline-flex h-[55px] w-full items-center justify-center rounded-full bg-paper px-8 text-[17px] font-medium text-ink"
+              className="inline-flex h-[3.4375rem] w-full items-center justify-center rounded-full bg-paper px-8 text-[1.0625rem] font-medium text-ink"
             >
               Demander un devis
             </Link>
