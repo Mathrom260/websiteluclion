@@ -77,9 +77,9 @@ export function Hero() {
             variants={rise}
             className="mt-6 text-[clamp(2.6rem,3.8vw,4.25rem)] leading-[1.02] font-light tracking-[-0.02em] text-paper sm:leading-[0.97]"
           >
-            <span className="sm:block">Des installations </span>
-            <span className="sm:block">électriques qui font </span>
-            <span className="text-accent sm:block">avancer votre entreprise.</span>
+            <span className="sm:block">L’expertise électrique </span>
+            <span className="sm:block">au service de </span>
+            <span className="text-accent sm:block">votre activité.</span>
           </motion.h1>
 
           <motion.p
