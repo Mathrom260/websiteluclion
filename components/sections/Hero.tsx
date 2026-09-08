@@ -86,7 +86,7 @@ export function Hero() {
             variants={rise}
             className="mt-7 max-w-[40rem] text-lg leading-relaxed text-paper/90 md:text-xl"
           >
-            Luc Lion accompagne les entreprises dans leurs installations électriques, de la
+            Luc Lion SA accompagne les entreprises dans leurs installations électriques, de la
             conception à la réalisation et à la maintenance.
           </motion.p>
 
