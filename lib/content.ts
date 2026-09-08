@@ -380,12 +380,13 @@ export const servicesHeroImage = {
   alt: 'Deux techniciens consultant des plans devant une ligne de cellules électriques',
 };
 
+/** Navigation du header et du footer. « Carrières » est masquée tant que la page n'existe pas. */
 export const navigation = [
   { label: 'Accueil', href: '/' },
   { label: 'Services', href: '/expertise' },
   { label: 'Réalisations', href: '/realisations' },
   { label: 'À propos', href: '/a-propos' },
-  { label: 'Carrières', href: '/carrieres' },
+  // { label: 'Carrières', href: '/carrieres' },
   { label: 'Contact', href: '/contact' },
 ] as const;
 

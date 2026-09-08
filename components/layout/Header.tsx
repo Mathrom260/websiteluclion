@@ -6,24 +6,21 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
+import { navigation, services } from '@/lib/content';
 import { cn } from '@/lib/utils';
 
-const services = [
-  { label: 'Installations électriques', href: '/expertise#installations-electriques' },
-  { label: 'Électricité tertiaire', href: '/expertise#electricite-tertiaire' },
-  { label: 'Tableaux électriques', href: '/expertise#tableaux-electriques' },
-  { label: 'Mise en conformité RGIE', href: '/expertise#mise-conformite' },
-  { label: 'Câblage & infrastructure', href: '/expertise#cablage-infrastructure' },
-  { label: 'Maintenance & dépannage', href: '/expertise#maintenance-depannage' },
-];
+const serviceLinks = services.map(({ slug, label }) => ({
+  label,
+  href: `/expertise#${slug}`,
+}));
 
-const navItems = [
-  { label: 'Services', href: '/expertise', children: services },
-  { label: 'Réalisations', href: '/realisations' },
-  { label: 'À propos', href: '/a-propos' },
-  { label: 'Carrières', href: '/carrieres' },
-  { label: 'Contact', href: '/contact' },
-];
+// Même source que le footer (lib/content.ts) ; « Accueil » est porté par le logo.
+const navItems = navigation
+  .filter((item) => item.href !== '/')
+  .map((item) => ({
+    ...item,
+    children: item.href === '/expertise' ? serviceLinks : undefined,
+  }));
 
 const linkClass =
   'relative text-[1.0625rem] font-normal text-paper/90 transition-colors duration-200 hover:text-paper aria-[current=page]:text-paper aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-0.5 aria-[current=page]:after:h-px aria-[current=page]:after:bg-accent';
