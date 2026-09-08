@@ -76,10 +76,32 @@ export type Sector = {
   image?: { src: string; alt: string };
 };
 
+/** Visuels d'illustration générés (gpt-image-2, sept. 2026) — pas des chantiers Luc Lion. */
 export const sectors: Sector[] = [
-  { label: 'Industrie', href: '/realisations' },
-  { label: 'Tertiaire', href: '/realisations' },
-  { label: 'Logistique', href: '/realisations' },
+  {
+    label: 'Industrie',
+    href: '/realisations',
+    image: {
+      src: '/images/secteur-industrie.webp',
+      alt: 'Bâtiment industriel contemporain éclairé à la tombée du jour',
+    },
+  },
+  {
+    label: 'Tertiaire',
+    href: '/realisations',
+    image: {
+      src: '/images/secteur-tertiaire.webp',
+      alt: 'Immeuble de bureaux à façade vitrée en plein jour',
+    },
+  },
+  {
+    label: 'Logistique',
+    href: '/realisations',
+    image: {
+      src: '/images/secteur-logistique.webp',
+      alt: "Allée centrale d'un entrepôt logistique avec rayonnages et éclairage LED",
+    },
+  },
 ];
 
 /** Photo de la section split « Un accompagnement à chaque étape ». Source 3:1, recadrée
@@ -120,8 +142,11 @@ export const ctaImage: { src: string; alt: string } | undefined = {
   alt: 'Le bâtiment Luc Lion SA à Jemeppe-sur-Sambre, éclairé à la tombée du jour',
 };
 
-/** Photo de la section « Sécurité et conformité » — à fournir. */
-export const complianceImage: { src: string; alt: string } | undefined = undefined;
+/** Photo de la section « Sécurité et conformité » (générée, gpt-image-2, sept. 2026). */
+export const complianceImage: { src: string; alt: string } | undefined = {
+  src: '/images/securite-cables.webp',
+  alt: 'Faisceaux de câbles électriques jaunes dans des chemins de câbles en acier',
+};
 
 export type Client = {
   name: string;
