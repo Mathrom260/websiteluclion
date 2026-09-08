@@ -1,9 +1,27 @@
 import {
+  Activity,
+  BadgeCheck,
+  CalendarCheck,
   ChartNoAxesColumnIncreasing,
+  ClipboardCheck,
   Clock,
+  DraftingCompass,
+  FileCheck2,
   FileText,
+  Gauge,
+  Layers,
+  Lightbulb,
+  Network,
+  PencilRuler,
+  Plug,
+  Rows3,
+  SearchCheck,
+  Settings2,
   ShieldCheck,
+  Timer,
   Users,
+  Waypoints,
+  Wrench,
   Zap,
   type LucideIcon,
 } from 'lucide-react';
@@ -19,15 +37,117 @@ export const contact = {
     'https://www.google.com/maps/search/?api=1&query=Chaussée+de+Charleroi+81,+5190+Jemeppe-sur-Sambre,+Belgique',
 };
 
-/** Les 6 domaines d'intervention (ancres de la page Services, options du formulaire). */
-export const services = [
-  { slug: 'installations-electriques', label: 'Installations électriques' },
-  { slug: 'electricite-tertiaire', label: 'Électricité tertiaire' },
-  { slug: 'tableaux-electriques', label: 'Tableaux électriques' },
-  { slug: 'mise-conformite', label: 'Mise en conformité RGIE' },
-  { slug: 'cablage-infrastructure', label: 'Câblage & infrastructure' },
-  { slug: 'maintenance-depannage', label: 'Maintenance & dépannage' },
-] as const;
+export type ServiceFeature = { icon: LucideIcon; label: string };
+
+export type Service = {
+  slug: string;
+  label: string;
+  /** Description vérifiée, reprise de la v1. */
+  description: string;
+  /** Trois attributs génériques du service — pas de chiffres, pas de promesses. */
+  features: [ServiceFeature, ServiceFeature, ServiceFeature];
+  image: { src: string; alt: string };
+};
+
+/** Les 6 domaines d'intervention : ancres de la page Services, menu, footer, formulaire. */
+export const services: Service[] = [
+  {
+    slug: 'installations-electriques',
+    label: 'Installations électriques',
+    description:
+      "Conception et réalisation d'installations haute et basse tension sur sites industriels et tertiaires.",
+    features: [
+      { icon: PencilRuler, label: 'Étude et conseil' },
+      { icon: Settings2, label: 'Réalisation sur mesure' },
+      { icon: ClipboardCheck, label: 'Mise en service' },
+    ],
+    image: {
+      src: '/images/service-installations.webp',
+      alt: "Technicien sur nacelle fixant un chemin de câbles sous la toiture d'un hall industriel",
+    },
+  },
+  {
+    slug: 'electricite-tertiaire',
+    label: 'Électricité tertiaire',
+    description:
+      'Bureaux, commerces et bâtiments publics. Installations complètes et conformes aux normes en vigueur.',
+    features: [
+      { icon: Lightbulb, label: 'Éclairage et distribution' },
+      { icon: Network, label: 'Réseaux et connectivité' },
+      { icon: Layers, label: 'Solutions sur mesure' },
+    ],
+    image: {
+      src: '/images/service-tertiaire.webp',
+      alt: 'Open space moderne avec luminaires LED linéaires et cloisons vitrées',
+    },
+  },
+  {
+    slug: 'tableaux-electriques',
+    label: 'Tableaux électriques',
+    description:
+      'Conception, câblage et mise en service de tableaux basse tension sur mesure.',
+    features: [
+      { icon: DraftingCompass, label: 'Conception sur mesure' },
+      { icon: BadgeCheck, label: 'Matériel de qualité' },
+      { icon: Gauge, label: 'Tests et mise en service' },
+    ],
+    image: {
+      src: '/images/service-tableaux.webp',
+      alt: 'Tableau basse tension ouvert en atelier, câblage ordonné sur rails DIN',
+    },
+  },
+  {
+    slug: 'mise-conformite',
+    label: 'Mise en conformité RGIE',
+    description:
+      'Audit et remise aux normes RGIE de vos installations existantes.',
+    features: [
+      { icon: SearchCheck, label: "Audit de l'existant" },
+      { icon: Wrench, label: 'Remise aux normes' },
+      { icon: FileCheck2, label: 'Rapport de conformité' },
+    ],
+    image: {
+      src: '/images/service-rgie.webp',
+      alt: 'Contrôleur mesurant une installation électrique avec un testeur portable',
+    },
+  },
+  {
+    slug: 'cablage-infrastructure',
+    label: 'Câblage & infrastructure',
+    description:
+      'Cheminements de câbles, goulottes et chemins de câbles pour tous types de sites.',
+    features: [
+      { icon: Waypoints, label: 'Chemins de câbles' },
+      { icon: Rows3, label: 'Goulottes et gaines' },
+      { icon: Plug, label: 'Raccordements' },
+    ],
+    image: {
+      src: '/images/service-cablage.webp',
+      alt: 'Galerie technique avec chemins de câbles en acier fraîchement posés',
+    },
+  },
+  {
+    slug: 'maintenance-depannage',
+    label: 'Maintenance & dépannage',
+    description:
+      "Contrats préventifs et interventions curatives rapides sur l'ensemble de vos installations.",
+    features: [
+      { icon: CalendarCheck, label: 'Contrats préventifs' },
+      { icon: Timer, label: 'Dépannage rapide' },
+      { icon: Activity, label: 'Suivi de vos installations' },
+    ],
+    image: {
+      src: '/images/service-maintenance.webp',
+      alt: "Technicien avec sa caisse à outils se dirigeant vers un site industriel à l'aube",
+    },
+  },
+];
+
+/** Visuel du hero de la page Services (généré, gpt-image-2, sept. 2026). */
+export const servicesHeroImage = {
+  src: '/images/services-hero.webp',
+  alt: 'Deux techniciens consultant des plans devant une ligne de cellules électriques',
+};
 
 export const navigation = [
   { label: 'Accueil', href: '/' },

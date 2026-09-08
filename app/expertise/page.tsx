@@ -1,122 +1,29 @@
-import Link from 'next/link';
-import { ShieldCheck, Award } from 'lucide-react';
-import { NavBar } from '@/components/NavBar';
-import { Expertise } from '@/components/Expertise';
-import { Methode } from '@/components/Methode';
-import { Footer } from '@/components/Footer';
+import type { Metadata } from 'next';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { ServicesHero } from '@/components/sections/ServicesHero';
+import { ServiceSection } from '@/components/sections/ServiceSection';
+import { CtaFinal } from '@/components/sections/CtaFinal';
+import { services } from '@/lib/content';
 
-const certifications = [
-  {
-    id: 'vca',
-    icon: ShieldCheck,
-    title: 'Certifié VCA*',
-    description:
-      "La certification VCA* garantit que nos équipes interviennent selon les normes de sécurité les plus strictes. Pour vous, c'est la certitude d'une intervention sans risque, sur tout type de site.",
-  },
-  {
-    id: 'rgie',
-    icon: Award,
-    title: 'Agréé RGIE Art.104',
-    description:
-      "L'agrément RGIE Art.104 certifie la conformité totale de nos installations avec la réglementation électrique belge. Une garantie légale et technique sur chaque chantier.",
-  },
-];
+export const metadata: Metadata = {
+  title: 'Services',
+  description:
+    'Installations électriques, électricité tertiaire, tableaux, mise en conformité RGIE, câblage et maintenance : les six domaines d’intervention de Luc Lion SA en Belgique.',
+};
 
-export default function ExpertisePage() {
+export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-[#1a2035] text-[#eef2f8]">
-      <NavBar />
-
-      {/* Header de page */}
-      <section
-        className="relative flex min-h-[50vh] w-full items-center justify-center overflow-hidden py-32 text-center"
-        style={{
-          backgroundImage: "url('/images/Lionbatiment.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: '50% 30%',
-        }}
-      >
-        {/* Overlay */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[rgba(26,32,53,0.82)]" />
-
-        {/* Contenu */}
-        <div className="relative z-10 mx-auto max-w-3xl px-6">
-          <h1 className="text-4xl font-black leading-tight text-center text-[#eef2f8] md:text-5xl">
-            <span className="block">Nos services au service de</span>
-            <span className="block">
-              vos installations{' '}
-              <span className="bg-linear-to-r from-[#7ab0e8] to-[#2a6fd6] bg-clip-text text-transparent">
-                électriques
-              </span>
-            </span>
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#c8d4e8] md:text-lg">
-            Installations, mises en conformité et maintenance — réalisées par
-            des techniciens certifiés VCA* et agréés RGIE.
-          </p>
-        </div>
-      </section>
-
-      {/* Séparateur */}
-      <div className="mx-auto max-w-6xl border-b border-white/6" />
-
-      {/* Cards expertise */}
-      <Expertise />
-
-      {/* Méthode */}
-      <Methode />
-
-      {/* Certifications */}
-      <section className="bg-[#243050] pt-24 pb-24">
-        <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
-          <div className="mb-12 space-y-3 text-center">
-            <h2 className="text-2xl font-extrabold text-[#eef2f8] sm:text-3xl">
-              Certifications &amp; conformité
-            </h2>
-            <p className="mx-auto max-w-2xl text-sm text-[#8a9ab8]">
-              Nos accréditations ne sont pas que des labels — elles garantissent
-              la sécurité et la conformité de chaque intervention.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {certifications.map(({ id, icon: Icon, title, description }) => (
-              <div
-                key={id}
-                className="flex flex-col gap-3 rounded-xl border border-[#2a6fd6]/20 bg-[#243050] p-8 transition-colors duration-200 hover:border-[#2a6fd6]/40"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1e2840]">
-                  <Icon className="h-6 w-6 text-[#7ab0e8]" />
-                </div>
-                <p className="text-lg font-semibold text-[#eef2f8]">{title}</p>
-                <p className="text-sm leading-relaxed text-[#8a9ab8]">
-                  {description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA final */}
-      <section className="bg-[#1a2035] py-24 text-center">
-        <div className="mx-auto w-full max-w-2xl px-6 md:px-8">
-          <h2 className="mx-auto max-w-2xl text-3xl font-black text-[#eef2f8] md:text-4xl">
-            Un projet électrique à réaliser ?
-          </h2>
-          <p className="mx-auto mt-4 mb-8 max-w-xl text-base text-[#8a9ab8]">
-            Contactez-nous. Nous analysons votre besoin et revenons vers vous
-            avec une proposition claire et adaptée.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block rounded-lg bg-[#2a6fd6] px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:bg-[#2a6fd6]/90 hover:shadow-[0_0_20px_rgba(42,111,214,0.4)]"
-          >
-            Demander un devis
-          </Link>
-        </div>
-      </section>
-
+    <>
+      <Header />
+      <main>
+        <ServicesHero />
+        {services.map((service, index) => (
+          <ServiceSection key={service.slug} service={service} index={index} />
+        ))}
+        <CtaFinal />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
