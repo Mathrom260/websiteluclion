@@ -19,11 +19,13 @@ export function CtaFinal() {
       ) : (
         <div aria-hidden className="absolute inset-0 bg-ink-soft" />
       )}
-      {/* Voile : opaque sur le tiers gauche pour le texte, transparent sur le bâtiment. */}
+      {/* Voile desktop : opaque sur le tiers gauche pour le texte, transparent sur le bâtiment. */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-linear-to-r from-ink from-0% via-ink/75 via-30% to-ink/0 to-65%"
+        className="absolute inset-0 hidden bg-linear-to-r from-ink from-0% via-ink/85 via-32% to-ink/0 to-68% lg:block"
       />
+      {/* Voile mobile : la photo est recadrée trop serré pour cohabiter avec le texte. */}
+      <div aria-hidden className="absolute inset-0 bg-ink/85 lg:hidden" />
 
       <Container className="relative py-16">
         <Reveal className="max-w-[40rem]">

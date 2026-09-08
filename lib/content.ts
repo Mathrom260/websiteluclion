@@ -110,8 +110,11 @@ export const certifications: Certification[] = [
   },
 ];
 
-/** Photo du CTA final (bâtiment Luc Lion à la tombée du jour) — à fournir. */
-export const ctaImage: { src: string; alt: string } | undefined = undefined;
+/** Photo du CTA final : le bâtiment Luc Lion à Jemeppe-sur-Sambre, à la tombée du jour. */
+export const ctaImage: { src: string; alt: string } | undefined = {
+  src: '/images/cta-batiment-nuit.webp',
+  alt: 'Le bâtiment Luc Lion SA à Jemeppe-sur-Sambre, éclairé à la tombée du jour',
+};
 
 /** Photo de la section « Sécurité et conformité » — à fournir. */
 export const complianceImage: { src: string; alt: string } | undefined = undefined;
