@@ -20,6 +20,12 @@ Périmètre confirmé par Mathieu : **électricité uniquement** — le site dit
   mise en conformité RGIE, câblage & infrastructure, maintenance & dépannage
 - Méthode en 4 étapes : Analyse → Proposition → Réalisation → Contrôle
 - Les réalisations nommées de la v1 étaient des placeholders : aucun chantier inventé.
+- Historique (ancien site) : activité depuis 1972 (Luc Lion, fondateur), société en personne
+  physique 1977, SA + construction du siège 1986, essor 1988-1990, Michaël Lion depuis 1991.
+- Agréation marchés publics : Classe 4 P1, Classe 2 P2, Classe 2 P3, Classe 2 S1.
+- Certifications constructeur : Nexans, ITT Canon (Link 5e), R&M, Pfisterer Connex, Raychem,
+  Tyco Thermal Controls ; personnel certifié VCA. CAO : Autocad, See Electrical Expert,
+  Microstation, TR-CIEL. **À confirmer comme toujours actuelles.**
 
 ## Audience
 
