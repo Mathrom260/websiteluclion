@@ -13,8 +13,25 @@ Source unique des tokens : `app/globals.css` (`@theme`). Aucun hex ailleurs.
 | `accent` | `#A5CCF5` | 3ᵉ ligne du H1, icônes, hover des pills |
 | `accent-deep` | `#8FBBEB` | eyebrow, lien actif mobile |
 | `line` | `rgb(255 255 255 / .25)` | séparateurs, bordure de nav |
+| `line-soft` | `rgb(255 255 255 / .10)` | filets de colonnes, bordures discrètes |
+| `ink-2` | `#0B1C2C` | fond des sections sombres sous le hero |
+| `paper-muted` | `#A9B7C7` | texte secondaire sur fond sombre |
+| `paper-dim` | `#718398` | eyebrows et texte discret, sur sombre comme sur clair |
+| `light` | `#F4F6F8` | fond des sections claires (Réalisations) |
+| `light-ink` | `#081522` | texte sur fond clair |
 
-Texte secondaire : `paper/90` (paragraphes), `paper/70` (légendes), jamais un gris neutre.
+Texte secondaire dans le hero : `paper/90` (paragraphes), `paper/70` (légendes). Dans les
+sections : `paper-muted`. Jamais un gris neutre.
+
+## Sections (rythme)
+
+- Padding vertical `py-[4.5rem] md:py-20`. Eyebrow → titre `mt-4` → sous-titre `mt-4` → contenu `mt-12/14`.
+- Titre de section : `text-[clamp(1.9rem,2.75vw,3rem)] leading-[1.1] font-normal tracking-[-0.02em]`.
+- Colonnes d'arguments : filet gauche `border-l border-line-soft pl-7`, pas de cards, pas de fond.
+- Split 50/50 : photo bord à bord, contenu `lg:pl-20` et marge droite alignée sur le conteneur
+  (`lg:pr-[max(2.5rem,calc((100vw-93.125rem)/2+2.5rem))]`).
+- Section claire : `bg-light text-light-ink`, vignettes `rounded-md`, aucune ombre, aucune bordure.
+- Reveal au scroll (`components/motion/Reveal.tsx`) : opacité 0 → 1, 20px → 0, 650ms, une fois.
 
 ## Typographie — Manrope (next/font/google)
 
